@@ -1,2 +1,2 @@
 # CompetitiveProgramming
-This is a repository containing my solutions to various programming problem statements.
+This is a repository containing my python solutions to various programming problem statements.
