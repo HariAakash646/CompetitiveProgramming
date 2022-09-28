@@ -6,3 +6,6 @@ Here is the problem statement in codeforces: [Problem Statement](https://codefor
 ## Last minute enhancements
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/last_minute_enhancements.py)     
 Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/1466/B)
+## Make Product Equal One
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/product_equal_one.py)     
+Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/1206/B)
