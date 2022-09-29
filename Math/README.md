@@ -8,6 +8,10 @@ Here is the problem statement in codeforces: [Problem Statement](https://codefor
 ## Filling Diamonds
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/Math/fill_diamonds.py)    
 Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/1339/A)   
+## Make it Divisible by 25
+This is part of the Brute Force folder. But it could also be considered a math based solution.
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/BruteForce/make_divisible_25.py)    
+Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/1593/B)
 
 
     
