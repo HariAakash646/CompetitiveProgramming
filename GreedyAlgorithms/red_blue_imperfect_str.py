@@ -34,3 +34,4 @@ for _ in range(t):
             ltr_ls[i] = "R"
     
     print("".join(ltr_ls))
+    
