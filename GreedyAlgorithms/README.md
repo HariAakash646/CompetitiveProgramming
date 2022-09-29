@@ -9,3 +9,6 @@ Here is the problem statement in codeforces: [Problem Statement](https://codefor
 ## Make Product Equal One
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/product_equal_one.py)     
 Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/1206/B)
+## Mocha and Red and Blue
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/red_blue_imperfect_str.py)     
+Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/1559/B)
