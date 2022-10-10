@@ -13,7 +13,7 @@ _This is part of the Brute Force folder, but could also be considered a math bas
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/BruteForce/make_divisible_25.py)    
 Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/1593/B)
 ## Raising Bacteria
-Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/BruteForce/raising_bacteria.py)    
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/Math/raising_bacteria.py)    
 Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/579/A)
 
 
