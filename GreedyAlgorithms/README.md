@@ -15,3 +15,6 @@ Here is the problem statement in codeforces: [Problem Statement](https://codefor
 ## Lunchbox
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/lunchbox.cpp)     
 Here is the problem statement: [Problem Statement](https://codebreaker.xyz/problem/lunchbox)
+## Painting
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/painting.cpp)     
+Here is the problem statement: [Problem Statement](https://codebreaker.xyz/problem/paint)
