@@ -13,5 +13,5 @@ Here is the problem statement in codeforces: [Problem Statement](https://codefor
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/red_blue_imperfect_str.py)     
 Here is the problem statement in codeforces: [Problem Statement](https://codeforces.com/problemset/problem/1559/B)    
 ## Lunchbox
-Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/red_blue_imperfect_str.py)     
-Here is the problem statement: [Problem Statement](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/lunchbox.cpp)
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/lunchbox.cpp)     
+Here is the problem statement: [Problem Statement](https://codebreaker.xyz/problem/lunchbox)
