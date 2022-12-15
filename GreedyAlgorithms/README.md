@@ -18,3 +18,6 @@ Here is the problem statement: [Problem Statement](https://codebreaker.xyz/probl
 ## Painting
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/painting.cpp)     
 Here is the problem statement: [Problem Statement](https://codebreaker.xyz/problem/paint)
+## Best Place
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/best_place.cpp)     
+Here is the problem statement: [Problem Statement](https://oj.uz/problem/view/NOI17_bestplace)
