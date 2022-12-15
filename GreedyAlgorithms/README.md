@@ -24,3 +24,6 @@ Here is the problem statement: [Problem Statement](https://oj.uz/problem/view/NO
 ## Competition
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/competition.cpp)     
 Here is the problem statement: [Problem Statement](https://tlx.toki.id/problems/sg-noi-2021-qual/A/)
+## Movie Festival
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/movie_festival.cpp)     
+Here is the problem statement: [Problem Statement](https://cses.fi/problemset/task/1629/)
