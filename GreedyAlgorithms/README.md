@@ -21,3 +21,6 @@ Here is the problem statement: [Problem Statement](https://codebreaker.xyz/probl
 ## Best Place
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/best_place.cpp)     
 Here is the problem statement: [Problem Statement](https://oj.uz/problem/view/NOI17_bestplace)
+## Best Place
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/competition.cpp)     
+Here is the problem statement: [Problem Statement](https://tlx.toki.id/problems/sg-noi-2021-qual/A/)
