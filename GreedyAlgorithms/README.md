@@ -27,3 +27,6 @@ Here is the problem statement: [Problem Statement](https://tlx.toki.id/problems/
 ## Movie Festival
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/movie_festival.cpp)     
 Here is the problem statement: [Problem Statement](https://cses.fi/problemset/task/1629/)
+## Max-Min Range
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/cherry.cpp)     
+Here is the problem statement: [Problem Statement](https://codeforces.com/problemset/problem/1554/A)
