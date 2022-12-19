@@ -33,3 +33,7 @@ Here is the problem statement: [Problem Statement](https://codeforces.com/proble
 ## Wabot
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/wabot.cpp)     
 Here is the problem statement: [Problem Statement](https://codebreaker.xyz/problem/wabot)
+## Too Many Segments
+Code exceeds Time Limit
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/too_many_segments.cpp)     
+Here is the problem statement: [Problem Statement](https://codeforces.com/contest/1249/problem/D2)
