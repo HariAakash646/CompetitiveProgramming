@@ -31,5 +31,5 @@ Here is the problem statement: [Problem Statement](https://cses.fi/problemset/ta
 Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/cherry.cpp)     
 Here is the problem statement: [Problem Statement](https://codeforces.com/problemset/problem/1554/A)
 ## Wabot
-Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/cherry.cpp)     
+Here is the repository containing the code: [My solution](https://github.com/HariAakash646/CompetitiveProgramming/blob/main/GreedyAlgorithms/wabot.cpp)     
 Here is the problem statement: [Problem Statement](https://codebreaker.xyz/problem/wabot)
