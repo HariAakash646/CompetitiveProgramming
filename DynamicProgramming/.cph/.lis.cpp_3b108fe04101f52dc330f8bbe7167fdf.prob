@@ -1,0 +1,1 @@
+{"name":"Local: lis","url":"d:\\CompetitiveProgramming\\DynamicProgramming\\lis.cpp","tests":[{"id":1671790175841,"input":"6\n1 2 4 4 5 3","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\DynamicProgramming\\lis.cpp","group":"local","local":true}

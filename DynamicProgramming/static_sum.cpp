@@ -27,3 +27,35 @@ typedef long int li;
 typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
+
+int main()
+{
+
+    int n, q;
+    scd(n);
+    scd(q);
+    vector<ulli> dp(n);
+    vector<ulli> seq(n);
+    ulli a;
+    frange(i, n)
+    {
+        scanf("%llu", &a);
+        seq[i] = a;
+        if (i >= 1)
+            dp[i] = dp[i - 1] + a;
+        else
+            dp[i] = a;
+    }
+    int l, r;
+    frange(i, q)
+    {
+        scd(l);
+        scd(r);
+        if (l != 0)
+            printf("%llu\n", dp[r - 1] - dp[l - 1]);
+        else
+            printf("%llu\n", dp[r - 1]);
+    }
+
+    return 0;
+}

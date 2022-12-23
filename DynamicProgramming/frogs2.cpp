@@ -32,7 +32,7 @@ vector<int64> table{0};
 int64 n, k;
 int64 min_option(const vector<int64> &vec)
 {
-    int64 mini = 1e4;
+    int64 mini = 1000000001;
     int64 s = vec.size();
     int64 l = vec[s - 1];
     int64 mx = (0 > s - k) ? 0 : s - k - 1;

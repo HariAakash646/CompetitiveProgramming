@@ -27,3 +27,30 @@ typedef long int li;
 typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
+
+int main()
+{
+
+    int n;
+    scd(n);
+    vi dp(n);
+    vi seq(n);
+    scd(seq[0]);
+    dp[0] = 1;
+
+    forr(i, 1, n, 1)
+    {
+        scd(seq[i]);
+        int m = 0;
+        frange(j, i)
+        {
+            if (seq[i] > seq[j])
+            {
+                m = max(m, dp[j]);
+            }
+        }
+        dp[i] = m + 1;
+    }
+    printf("%d", *max_element(dp.begin(), dp.end()));
+    return 0;
+}

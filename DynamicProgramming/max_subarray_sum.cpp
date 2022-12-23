@@ -27,3 +27,21 @@ typedef long int li;
 typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
+
+int main()
+{
+
+    int n;
+    scd(n);
+    vector<lli> dp(n);
+    vector<lli> seq(n);
+    lli a;
+    scanf("%lld", &dp[0]);
+    forr(i, 1, n, 1)
+    {
+        sclld(a);
+        dp[i] = max(dp[i - 1] + a, a);
+    }
+    printf("%lld", *max_element(dp.begin(), dp.end()));
+    return 0;
+}

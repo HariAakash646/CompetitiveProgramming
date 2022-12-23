@@ -1,3 +1,8 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
 #include <bits/stdc++.h>
 #include <iostream>
 
@@ -23,7 +28,24 @@ typedef vector<vi> vvi;
 typedef map<int, int> mpii;
 typedef set<int> seti;
 typedef multiset<int> mseti;
-typedef long int li;
-typedef unsigned long int uli;
-typedef long long int lli;
-typedef unsigned long long int ulli;
+typedef long int int32;
+typedef unsigned long int uint32;
+typedef long long int int64;
+typedef unsigned long long int uint64;
+
+int mod = 15746;
+int main()
+{
+    int n;
+    scd(n);
+    vector<int> dp(n + 1);
+    dp[0] = 1;
+    dp[1] = 1;
+    forr(i, 2, n + 1, 1)
+    {
+        dp[i] = (dp[i - 1] % mod + dp[i - 2] % mod) % mod;
+    }
+    printf("%d", dp[n]);
+
+    return 0;
+}
