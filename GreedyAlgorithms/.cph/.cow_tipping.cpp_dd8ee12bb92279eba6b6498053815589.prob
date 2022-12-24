@@ -1,0 +1,1 @@
+{"name":"Local: cow_tipping","url":"d:\\CompetitiveProgramming\\GreedyAlgorithms\\cow_tipping.cpp","tests":[{"id":1671885433727,"input":"3\n001\n111\n111","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\GreedyAlgorithms\\cow_tipping.cpp","group":"local","local":true}

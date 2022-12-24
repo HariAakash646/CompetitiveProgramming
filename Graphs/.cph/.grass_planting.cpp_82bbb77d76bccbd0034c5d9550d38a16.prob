@@ -1,0 +1,1 @@
+{"name":"Local: grass_planting","url":"d:\\CompetitiveProgramming\\Graphs\\grass_planting.cpp","tests":[{"id":1671902728952,"input":"4\n1 2\n4 3\n2 3","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\grass_planting.cpp","group":"local","local":true}
