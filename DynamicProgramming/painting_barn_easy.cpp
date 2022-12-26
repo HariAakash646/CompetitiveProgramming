@@ -30,37 +30,43 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-    freopen("outofplace.in", "r", stdin);
-    freopen("outofplace.out", "w", stdout);
 
-    int n;
+    freopen("paintbarn.in", "r", stdin);
+    freopen("paintbarn.out", "w", stdout);
+
+    vvi diff(1003, vi(1003, 0));
+    vvi vec(1003, vi(1003, 0));
+
+    int n, k;
     scd(n);
-    vi vec(n);
+    scd(k);
+    int x1, y1, x2, y2;
     frange(i, n)
     {
-        scd(vec.at(i));
+        scd(x1);
+        scd(y1);
+        scd(x2);
+        scd(y2);
+        x1++;
+        x2++;
+        y1++;
+        y2++;
+        diff[x1][y1]++;
+        diff[x1][y2]--;
+        diff[x2][y1]--;
+        diff[x2][y2]++;
     }
-    int s = vec.size();
-    int swaps = 0;
-    for (int i = s - 1; i > 0;)
+    int c = 0;
+    forr(i, 1, 1002, 1)
     {
-        if (vec.at(i) >= vec.at(i - 1))
+        forr(j, 1, 1002, 1)
         {
-            i--;
-            continue;
+            vec[i][j] = diff[i][j] + vec[i - 1][j] + vec[i][j - 1] - vec[i - 1][j - 1];
+            if (vec[i][j] == k)
+                c++;
         }
-        int j = i - 1;
-        while (j != 0 && vec.at(j) == vec.at(j - 1))
-            j--;
-        swap(vec.at(i), vec.at(j));
-        i = j;
-        swaps++;
     }
 
-    cout << swaps;
+    cout << c;
+    return 0;
 }
-
-// Does't pass all tests. Has simpler but seemingly less efficient working solution on website. :(
-// Error test case example:
-// 5
-// 5 1 2 3 4

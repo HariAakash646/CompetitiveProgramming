@@ -30,37 +30,27 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-    freopen("outofplace.in", "r", stdin);
-    freopen("outofplace.out", "w", stdout);
+    freopen("div7.in", "r", stdin);
+    freopen("div7.out", "w", stdout);
 
     int n;
     scd(n);
-    vi vec(n);
-    frange(i, n)
+    vector<lli> vec(n + 1, 0);
+    vector<lli> sum_arr(n + 1, 0);
+    vector<vector<int>> rem(7);
+    rem[0].PB(0);
+    forr(i, 1, n + 1, 1)
     {
-        scd(vec.at(i));
+        sclld(vec[i]);
+        sum_arr[i] = vec[i] + sum_arr[i - 1];
+        rem[(sum_arr[i] % 7)].PB(i);
     }
-    int s = vec.size();
-    int swaps = 0;
-    for (int i = s - 1; i > 0;)
+    int m = 0;
+    for (vi v : rem)
     {
-        if (vec.at(i) >= vec.at(i - 1))
-        {
-            i--;
+        if (v.empty())
             continue;
-        }
-        int j = i - 1;
-        while (j != 0 && vec.at(j) == vec.at(j - 1))
-            j--;
-        swap(vec.at(i), vec.at(j));
-        i = j;
-        swaps++;
+        m = max(m, *(v.end() - 1) - *v.begin());
     }
-
-    cout << swaps;
+    printf("%d", m);
 }
-
-// Does't pass all tests. Has simpler but seemingly less efficient working solution on website. :(
-// Error test case example:
-// 5
-// 5 1 2 3 4

@@ -30,37 +30,28 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-    freopen("outofplace.in", "r", stdin);
-    freopen("outofplace.out", "w", stdout);
+    // freopen("stacking.in", "r", stdin);
+    // freopen("stacking.out", "w", stdout);
 
-    int n;
+    int n, k;
     scd(n);
-    vi vec(n);
-    frange(i, n)
+    scd(k);
+    int a, b;
+    vi vec(n + 2);
+    frange(i, k)
     {
-        scd(vec.at(i));
+        scd(a);
+        scd(b);
+        vec[a]++;
+        vec[b + 1]--;
     }
-    int s = vec.size();
-    int swaps = 0;
-    for (int i = s - 1; i > 0;)
+    vi stacks(n);
+    stacks[0] = vec[1];
+    forr(i, 1, n, 1)
     {
-        if (vec.at(i) >= vec.at(i - 1))
-        {
-            i--;
-            continue;
-        }
-        int j = i - 1;
-        while (j != 0 && vec.at(j) == vec.at(j - 1))
-            j--;
-        swap(vec.at(i), vec.at(j));
-        i = j;
-        swaps++;
+        stacks[i] = vec[i + 1] + stacks[i - 1];
     }
-
-    cout << swaps;
+    sort(stacks.begin(), stacks.end());
+    printf("%d", stacks[stacks.size() / 2]);
+    return 0;
 }
-
-// Does't pass all tests. Has simpler but seemingly less efficient working solution on website. :(
-// Error test case example:
-// 5
-// 5 1 2 3 4

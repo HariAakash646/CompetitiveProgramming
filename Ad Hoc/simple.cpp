@@ -30,37 +30,29 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-    freopen("outofplace.in", "r", stdin);
-    freopen("outofplace.out", "w", stdout);
-
-    int n;
-    scd(n);
-    vi vec(n);
-    frange(i, n)
+    int t;
+    scd(t);
+    frange(i, t)
     {
-        scd(vec.at(i));
-    }
-    int s = vec.size();
-    int swaps = 0;
-    for (int i = s - 1; i > 0;)
-    {
-        if (vec.at(i) >= vec.at(i - 1))
+        int n;
+        int m;
+        scd(n);
+        scd(m);
+        int a;
+        bool buy = false;
+        frange(j, n)
         {
-            i--;
-            continue;
+            scd(a);
+            if (a <= m)
+            {
+                buy = true;
+            }
         }
-        int j = i - 1;
-        while (j != 0 && vec.at(j) == vec.at(j - 1))
-            j--;
-        swap(vec.at(i), vec.at(j));
-        i = j;
-        swaps++;
+        if (buy)
+            cout << "YES\n";
+        else
+            cout << "NO\n";
     }
 
-    cout << swaps;
+    return 0;
 }
-
-// Does't pass all tests. Has simpler but seemingly less efficient working solution on website. :(
-// Error test case example:
-// 5
-// 5 1 2 3 4

@@ -30,37 +30,31 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-    freopen("outofplace.in", "r", stdin);
-    freopen("outofplace.out", "w", stdout);
 
-    int n;
+    int n, q;
     scd(n);
-    vi vec(n);
-    frange(i, n)
+    scd(q);
+    vvi vec(n + 1, vi(n + 1, 0));
+    string a;
+    int b;
+    forr(i, 1, n + 1, 1)
     {
-        scd(vec.at(i));
-    }
-    int s = vec.size();
-    int swaps = 0;
-    for (int i = s - 1; i > 0;)
-    {
-        if (vec.at(i) >= vec.at(i - 1))
+        cin >> a;
+        forr(j, 1, n + 1, 1)
         {
-            i--;
-            continue;
+            b = (a[j - 1] == '*') ? 1 : 0;
+            vec[i][j] = vec[i - 1][j] + vec[i][j - 1] + b - vec[i - 1][j - 1];
         }
-        int j = i - 1;
-        while (j != 0 && vec.at(j) == vec.at(j - 1))
-            j--;
-        swap(vec.at(i), vec.at(j));
-        i = j;
-        swaps++;
+    }
+    int y1, x1, y2, x2;
+    frange(i, q)
+    {
+        scd(y1);
+        scd(x1);
+        scd(y2);
+        scd(x2);
+        cout << (vec[y2][x2] - vec[y1 - 1][x2] - vec[y2][x1 - 1] + vec[y1 - 1][x1 - 1]) << "\n";
     }
 
-    cout << swaps;
+    return 0;
 }
-
-// Does't pass all tests. Has simpler but seemingly less efficient working solution on website. :(
-// Error test case example:
-// 5
-// 5 1 2 3 4

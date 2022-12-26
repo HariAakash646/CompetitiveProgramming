@@ -1,0 +1,1 @@
+{"name":"Local: Haybale_stack_median","url":"d:\\CompetitiveProgramming\\DynamicProgramming\\Haybale_stack_median.cpp","tests":[{"id":1671962929130,"input":"7 4\n5 5\n2 4\n4 6\n3 5","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\DynamicProgramming\\Haybale_stack_median.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: string_mod","url":"d:\\CompetitiveProgramming\\Ad Hoc\\string_mod.cpp","tests":[{"id":1672059016163,"input":"3\n3\nabc\n4\nefgh\n5\njklmn","output":"cba\ngfeh\nnmjkl"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Ad Hoc\\string_mod.cpp","group":"local","local":true}
