@@ -30,6 +30,15 @@ typedef unsigned long long int ulli;
 
 bool ycomp(pii x, pii y) {return x.second < y.second;}
 
+int prefix2d(vvi &table, int x1, int y1, int x2, int y2) {
+    int maxx = max(x1, x2);
+    int maxy = max(y1, y2);
+    int minx = min(x1, x2) - 1;
+    int miny = min(y1, y2) - 1;
+    return table[maxx][maxy] - table[maxx][miny] - table[minx][maxy] + table[minx][miny];
+    
+}
+
 
 int main() {
     
@@ -50,21 +59,24 @@ int main() {
     forr(i, 1, n+1, 1) {
         forr(j, 1, n+1, 1) {
             table[i][j] = table[i][j] + table[i-1][j] + table[i][j-1] - table[i-1][j-1];
-            cout << table[i][j] << " ";
-        }
-        cout << "\n";
-    }
-    int c = grid.size()+1;
-    frange(i, n-1) {
-        forr(j, i, n, 1) {
-            int maxx = max(grid[i].first, grid[j].first);
-            int maxy = max(grid[i].second, grid[j].second);
-            int minx = min(grid[i].first, grid[j].first) - 1;
-            int miny = min(grid[i].second, grid[j].second) - 1;
-            c += table[maxx][maxy] - table[maxx][miny] - table[minx][maxy] + table[minx][miny]-1;
         }
     }
-    printf("%d", c);
+    long long c = grid.size()+1;
+    int a, b;
+    frange(i, n) {
+        forr(j, i+1, n, 1) {
+            if(grid[i].second > grid[j].second) {
+                a = prefix2d(table, grid[i].first, grid[i].second, grid[j].first, n);
+                b = prefix2d(table, grid[j].first, grid[j].second, grid[i].first, 1);
+            }
+            else {
+                a = prefix2d(table, grid[j].first, grid[j].second, grid[i].first, n);
+                b = prefix2d(table, grid[i].first, grid[i].second, grid[j].first, 1);
+            }
+            c += a * b;
+        }
+    }
+    printf("%lld", c);
     
     return 0;
 }
