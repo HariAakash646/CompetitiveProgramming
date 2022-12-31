@@ -1,0 +1,1 @@
+{"name":"Local: tasks_deadlines_cses","url":"d:\\CompetitiveProgramming\\Sorting_or_Searching\\tasks_deadlines_cses.cpp","tests":[{"id":1672431501323,"input":"3\n6 10\n8 15\n5 12","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Sorting_or_Searching\\tasks_deadlines_cses.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: flight_routes_cses","url":"d:\\CompetitiveProgramming\\Graphs\\flight_routes_cses.cpp","tests":[{"id":1672508658107,"input":"4 5\n1 2\n2 3\n3 1\n1 4\n3 4","output":"NO\n4 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\flight_routes_cses.cpp","group":"local","local":true}

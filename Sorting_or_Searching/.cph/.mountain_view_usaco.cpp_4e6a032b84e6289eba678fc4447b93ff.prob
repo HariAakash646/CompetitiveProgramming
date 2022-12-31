@@ -1,0 +1,1 @@
+{"name":"Local: mountain_view_usaco","url":"d:\\CompetitiveProgramming\\Sorting\\mountain_view_usaco.cpp","tests":[{"id":1672256309266,"input":"3\n4 6\n7 2\n2 5","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Sorting\\mountain_view_usaco.cpp","group":"local","local":true}
