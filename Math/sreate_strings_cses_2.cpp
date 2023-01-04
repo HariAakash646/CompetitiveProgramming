@@ -14,7 +14,7 @@ using namespace std;
 #define frange(i, j) forr(i, 0, j, 1)
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
-#define PB push_back
+#define pb push_back
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -28,35 +28,46 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
+lli mod = 1e9 + 7;
+
+lli exp(lli a, lli b, lli m)
+{
+    lli prod = 1;
+    while (b > 0)
+    {
+        if (b % 2 == 1)
+        {
+            prod = (prod * a) % m;
+        }
+        b /= 2;
+        a = (a * a) % m;
+    }
+    return prod;
+}
+
 int main()
 {
-
-    int t;
-    scd(t);
-    int n;
-    string s;
-    string p(100000000);
-    frange(i, t)
+    string str;
+    cin >> str;
+    int n = 0;
+    map<char, int> mp;
+    for (auto e : str)
     {
-        scd(n);
-
-        cin >> s;
-        deque<char> dq;
-        bool pf = false;
-        forr(j, 1, n + 1, 1)
-        {
-            if (pf)
-                dq.push_front(s[j - 1]);
-            else
-                dq.push_back(s[j - 1]);
-            if (j % 2 == 1)
-                pf = (pf) ? false : true;
-        }
-        if (pf)
-        {
-        }
-        cout << p << "\n";
+        n++;
+        mp[e]++;
     }
-
+    vector<lli> fact(n + 1, 1);
+    vector<lli> inv(n + 1, 1);
+    forr(i, 1, n + 1, 1)
+    {
+        fact[i] = (fact[i - 1] * i) % mod;
+        inv[i] = exp(fact[i], mod - 2, mod);
+    }
+    lli num = fact[n];
+    for (auto p : mp)
+    {
+        num = (num * fact[p.second]) % mod;
+    }
+    cout << num << "\n";
     return 0;
 }

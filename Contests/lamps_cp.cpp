@@ -15,8 +15,12 @@ using namespace std;
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
 #define PB push_back
+#define f first
+#define s second
+
 typedef pair<int, int> pii;
 typedef vector<int> vi;
+typedef vector<bool> vb;
 typedef vector<string> vs;
 typedef vector<pii> vii;
 typedef vector<vi> vvi;
@@ -30,33 +34,29 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-
     int t;
     scd(t);
-    int n;
-    string s;
-    string p(100000000);
+
     frange(i, t)
     {
+        int n;
         scd(n);
-
-        cin >> s;
-        deque<char> dq;
-        bool pf = false;
-        forr(j, 1, n + 1, 1)
+        string lamps;
+        cin >> lamps;
+        auto itrl = lamps.find_last_of('L');
+        auto itrr = lamps.find('R');
+        if (itrl == string::npos || itrr == string::npos)
         {
-            if (pf)
-                dq.push_front(s[j - 1]);
-            else
-                dq.push_back(s[j - 1]);
-            if (j % 2 == 1)
-                pf = (pf) ? false : true;
+            cout << -1 << "\n";
         }
-        if (pf)
+        else if (itrl < itrr)
         {
+            cout << itrr << "\n";
         }
-        cout << p << "\n";
+        else
+        {
+            cout << 0 << "\n";
+        }
     }
-
     return 0;
 }

@@ -13,8 +13,11 @@ using namespace std;
 #define forr(i, j, k, in) for (int i = j; i < k; i += in)
 #define frange(i, j) forr(i, 0, j, 1)
 #define all(cont) cont.begin(), cont.end()
-#define MP make_pair
-#define PB push_back
+#define mp make_pair
+#define pb push_back
+#define f first
+#define s second
+
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -28,35 +31,46 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
+int mod = 998244353;
+
 int main()
 {
-
-    int t;
-    scd(t);
-    int n;
-    string s;
-    string p(100000000);
-    frange(i, t)
+    int q;
+    scd(q);
+    deque<pii> func;
+    int m;
+    frange(i, q)
     {
-        scd(n);
-
-        cin >> s;
-        deque<char> dq;
-        bool pf = false;
-        forr(j, 1, n + 1, 1)
+        scd(m);
+        if (m == 0)
         {
-            if (pf)
-                dq.push_front(s[j - 1]);
+            int a, b;
+            scd(a);
+            scd(b);
+            func.pb(pii{a, b});
+        }
+        else if (m == 1)
+        {
+            func.pop_front();
+        }
+        else
+        {
+            int x;
+            scd(x);
+            if (func.size() == 0)
+            {
+                printf("%d\n", x);
+            }
             else
-                dq.push_back(s[j - 1]);
-            if (j % 2 == 1)
-                pf = (pf) ? false : true;
-        }
-        if (pf)
-        {
-        }
-        cout << p << "\n";
-    }
+            {
+                for (auto p : func)
+                {
 
+                    x = (((p.f * x) % mod) + p.s) % mod;
+                }
+                printf("%d\n", x);
+            }
+        }
+    }
     return 0;
 }

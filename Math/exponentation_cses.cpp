@@ -15,6 +15,9 @@ using namespace std;
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
 #define PB push_back
+#define f first
+#define s second
+
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -28,35 +31,33 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
+lli mod = 1e9 + 7;
+
+lli exp(lli x, lli y, lli mod)
+{
+    if (y == 0)
+        return 1;
+    else if (y % 2 == 1)
+    {
+        return ((x % mod) * (exp(x, y - 1, mod) % mod));
+    }
+    else
+    {
+        lli out = exp(x, y / 2, mod) % mod;
+        return (out * out);
+    }
+}
+
 int main()
 {
-
-    int t;
-    scd(t);
     int n;
-    string s;
-    string p(100000000);
-    frange(i, t)
+    scd(n);
+    frange(i, n)
     {
-        scd(n);
-
-        cin >> s;
-        deque<char> dq;
-        bool pf = false;
-        forr(j, 1, n + 1, 1)
-        {
-            if (pf)
-                dq.push_front(s[j - 1]);
-            else
-                dq.push_back(s[j - 1]);
-            if (j % 2 == 1)
-                pf = (pf) ? false : true;
-        }
-        if (pf)
-        {
-        }
-        cout << p << "\n";
+        lli a, b, c;
+        sclld(a);
+        sclld(b);
+        sclld(c);
+        printf("%lld\n", exp(a, exp(b, c, (mod - 1)) % (mod - 1), mod) % mod);
     }
-
-    return 0;
 }

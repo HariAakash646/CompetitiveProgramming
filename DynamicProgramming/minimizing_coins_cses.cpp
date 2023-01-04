@@ -14,7 +14,7 @@ using namespace std;
 #define frange(i, j) forr(i, 0, j, 1)
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
-#define PB push_back
+#define pb push_back
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -31,32 +31,24 @@ typedef unsigned long long int ulli;
 int main()
 {
 
-    int t;
-    scd(t);
-    int n;
-    string s;
-    string p(100000000);
-    frange(i, t)
+    int m, n;
+    scd(m);
+    scd(n);
+    vi coins(m);
+    frange(i, m) scd(coins[i]);
+    vi vec(n + 1, 1e9);
+    vec[0] = 0;
+    forr(i, 1, n + 1, 1)
     {
-        scd(n);
-
-        cin >> s;
-        deque<char> dq;
-        bool pf = false;
-        forr(j, 1, n + 1, 1)
+        for (auto j : coins)
         {
-            if (pf)
-                dq.push_front(s[j - 1]);
-            else
-                dq.push_back(s[j - 1]);
-            if (j % 2 == 1)
-                pf = (pf) ? false : true;
+            if (i - j >= 0)
+                vec[i] = min(vec[i], vec[i - j] + 1);
         }
-        if (pf)
-        {
-        }
-        cout << p << "\n";
     }
-
+    if (vec[n] == 1e9)
+        cout << -1;
+    else
+        cout << vec[n];
     return 0;
 }

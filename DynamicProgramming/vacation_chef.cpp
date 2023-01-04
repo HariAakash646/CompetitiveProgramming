@@ -14,7 +14,7 @@ using namespace std;
 #define frange(i, j) forr(i, 0, j, 1)
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
-#define PB push_back
+#define pb push_back
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -30,33 +30,42 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-
-    int t;
-    scd(t);
-    int n;
-    string s;
-    string p(100000000);
-    frange(i, t)
+    int m, n;
+    scd(m);
+    scd(n);
+    vvi grid(m + 1, vi(n + 1));
+    frange(i, m)
     {
-        scd(n);
-
-        cin >> s;
-        deque<char> dq;
-        bool pf = false;
+        frange(j, n)
+        {
+            scd(grid[i + 1][j + 1]);
+        }
+    }
+    int q;
+    scd(q);
+    vvi dp(m + 1, vi(n + 1));
+    forr(i, 1, m + 1, 1)
+    {
         forr(j, 1, n + 1, 1)
         {
-            if (pf)
-                dq.push_front(s[j - 1]);
-            else
-                dq.push_back(s[j - 1]);
-            if (j % 2 == 1)
-                pf = (pf) ? false : true;
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1] + grid[i][j];
         }
-        if (pf)
-        {
-        }
-        cout << p << "\n";
     }
-
+    frange(i, q)
+    {
+        int a, b, c, d;
+        scd(a);
+        scd(b);
+        scd(c);
+        scd(d);
+        int s = dp[c][d] - dp[c][b - 1] - dp[a - 1][d] + dp[a - 1][b - 1];
+        int s1 = (c - a + 1) * (d - b + 1);
+        if (s == s1)
+        {
+            printf("1\n");
+        }
+        else
+            printf("0\n");
+    }
     return 0;
 }

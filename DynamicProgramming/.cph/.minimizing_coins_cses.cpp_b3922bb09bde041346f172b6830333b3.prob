@@ -1,0 +1,1 @@
+{"name":"Local: minimizing_coins_cses","url":"d:\\CompetitiveProgramming\\DynamicProgramming\\minimizing_coins_cses.cpp","tests":[{"id":1672839126829,"input":"3 11\n1 5 7","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\DynamicProgramming\\minimizing_coins_cses.cpp","group":"local","local":true}

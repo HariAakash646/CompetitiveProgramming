@@ -14,7 +14,7 @@ using namespace std;
 #define frange(i, j) forr(i, 0, j, 1)
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
-#define PB push_back
+#define pb push_back
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -28,35 +28,28 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
+int mod = 1e9 + 7;
+
 int main()
 {
 
-    int t;
-    scd(t);
     int n;
-    string s;
-    string p(100000000);
-    frange(i, t)
+    scd(n);
+    vi vec(n + 1, 0);
+    forr(i, 1, min(n + 1, 7), 1)
     {
-        scd(n);
-
-        cin >> s;
-        deque<char> dq;
-        bool pf = false;
-        forr(j, 1, n + 1, 1)
+        vec[i] = 1;
+        forr(j, 1, i, 1)
         {
-            if (pf)
-                dq.push_front(s[j - 1]);
-            else
-                dq.push_back(s[j - 1]);
-            if (j % 2 == 1)
-                pf = (pf) ? false : true;
+            vec[i] = (vec[i] + vec[j]) % mod;
         }
-        if (pf)
-        {
-        }
-        cout << p << "\n";
     }
-
-    return 0;
+    forr(i, 7, n + 1, 1)
+    {
+        forr(j, 1, 7, 1)
+        {
+            vec[i] = (vec[i] + vec[i - j]) % mod;
+        }
+    }
+    cout << vec[n];
 }

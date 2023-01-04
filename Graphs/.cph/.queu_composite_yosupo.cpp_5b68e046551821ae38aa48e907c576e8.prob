@@ -1,0 +1,1 @@
+{"name":"Local: queu_composite_yosupo","url":"d:\\CompetitiveProgramming\\Graphs\\queu_composite_yosupo.cpp","tests":[{"id":1672751972548,"input":"6\n0 4 5\n2 3\n0 2 1\n2 2\n1\n2 3","output":"17\n27\n7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\queu_composite_yosupo.cpp","group":"local","local":true}
