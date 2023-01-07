@@ -1,0 +1,1 @@
+{"name":"Local: mootube_usaco","url":"d:\\CompetitiveProgramming\\Graphs\\mootube_usaco.cpp","tests":[{"id":1673033619767,"input":"4 3\n1 2 3\n2 3 2\n2 4 4\n1 2\n4 1\n3 1","output":"3\n0\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\mootube_usaco.cpp","group":"local","local":true}

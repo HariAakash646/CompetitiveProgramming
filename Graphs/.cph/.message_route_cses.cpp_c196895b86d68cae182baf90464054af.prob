@@ -1,0 +1,1 @@
+{"name":"Local: message_route_cses","url":"d:\\CompetitiveProgramming\\Graphs\\message_route_cses.cpp","tests":[{"id":1673008857043,"input":"5 5\n1 2\n1 3\n1 4\n2 3\n5 4","output":"3\n1 4 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\message_route_cses.cpp","group":"local","local":true}

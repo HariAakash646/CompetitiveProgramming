@@ -1,0 +1,1 @@
+{"name":"Local: greatest_convex_cf","url":"d:\\CompetitiveProgramming\\Contests\\greatest_convex_cf.cpp","tests":[{"id":1672929531308,"input":"4\n3\n6\n8\n10","output":"2\n5\n7\n9\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\greatest_convex_cf.cpp","group":"local","local":true}
