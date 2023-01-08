@@ -32,34 +32,56 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
-mpii prime_fac(int x) {
+lli exp(lli x, lli y, lli mod)
+{
+    if (y == 0)
+        return 1;
+    else if (y % 2 == 1)
+    {
+        return ((x % mod) * (exp(x, y - 1, mod) % mod));
+    }
+    else
+    {
+        lli out = exp(x, y / 2, mod) % mod;
+        return (out * out);
+    }
+}
+
+mpii prime_fac(int x)
+{
     mpii out;
-    for(int i = 2; i * i <= x; i++) {
-        
-        if(x % i == 0) out[i] = 0;
-        while(x % i == 0) {
+    for (int i = 2; i * i <= x; i++)
+    {
+
+        if (x % i == 0)
+            out[i] = 0;
+        while (x % i == 0)
+        {
             out[i]++;
             x /= i;
         }
     }
-    if(x != 1) out[x] = 1;
+    if (x != 1)
+        out[x] = 1;
     return out;
 }
 
 int main()
 {
     int n;
-    scd(n); 
+    scd(n);
     int x;
-    frange(i, n) {
+    frange(i, n)
+    {
         scd(x);
         mpii fac = prime_fac(x);
         int prod = 1;
-        for(pii p : fac) {
+        for (pii p : fac)
+        {
             prod *= p.s + 1;
         }
         cout << prod << "\n";
     }
-    
+
     return 0;
 }

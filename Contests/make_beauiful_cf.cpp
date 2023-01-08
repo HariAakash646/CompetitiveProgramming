@@ -15,6 +15,8 @@ using namespace std;
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
 #define pb push_back
+#define f first
+#define s second
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -30,15 +32,33 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-    int n, m, c;
-    vi earn(n + 1);
-    frange(i, n) scd(earn[i + 1]);
-    vii road(n + 1);
-    int a, b;
-    frange(i, m)
+    int t;
+    scd(t);
+    frange(i, t)
     {
-        scd(a);
-        scd(b);
-        road[a].pb(b);
+        int n;
+        scd(n);
+        vi vec(n);
+        frange(j, n)
+        {
+            scd(vec[j]);
+        }
+        sort(vec.begin(), vec.end(), greater<int>());
+        if (vec[0] == vec[n - 1])
+        {
+            printf("NO\n");
+        }
+        else
+        {
+            int tmp = vec[1];
+            vec[1] = vec[n - 1];
+            vec[n - 1] = tmp;
+            printf("YES\n");
+            for (auto e : vec)
+            {
+                printf("%d ", e);
+            }
+            printf("\n");
+        }
     }
 }
