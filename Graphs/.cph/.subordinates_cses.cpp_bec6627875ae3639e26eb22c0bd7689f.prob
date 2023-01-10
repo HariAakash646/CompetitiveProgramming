@@ -1,0 +1,1 @@
+{"name":"Local: subordinates_cses","url":"d:\\CompetitiveProgramming\\Graphs\\subordinates_cses.cpp","tests":[{"id":1673371803906,"input":"5\n1 1 2 3","output":"4 1 1 0 0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\subordinates_cses.cpp","group":"local","local":true}
