@@ -1,5 +1,3 @@
-// Not working
-
 #include <bits/stdc++.h>
 #include <iostream>
 
@@ -136,16 +134,16 @@ int main()
     }
     dfs(1, 0);
     vi sublen(sze, 0);
+    vi idxvec(sze);
+    int idx = 0;
     for (auto e : info)
     {
-        vec[get<0>(e) - 1] = get<2>(e);
-        sublen[get<0>(e) - 1] = get<1>(e);
-        // printf("%d %d %d\n", get<0>(e), get<1>(e), get<2>(e));
+        idxvec[get<0>(e) - 1] = idx;
+        vec[idx] = get<2>(e);
+        sublen[idx] = get<1>(e);
+        ++idx;
     }
     build(0, 0, sze - 1);
-    // for (auto e : segtree)
-    //     cout << e << " ";
-    // cout << "\n";
     int t, sub, x;
     frange(i, q)
     {
@@ -154,19 +152,13 @@ int main()
         {
             scd(sub);
             scd(x);
-            update(0, 0, sze - 1, x, sub - 1);
-            // for (auto e : segtree)
-            //     cout << e << " ";
-            // cout << "\n";
+            update(0, 0, sze - 1, x, idxvec[sub - 1]);
         }
         else
         {
             scd(sub);
-            lli out = query(sub - 1, sub - 1 + sublen[sub - 1], 0, sze - 1, 0);
+            lli out = query(idxvec[sub - 1], idxvec[sub - 1] + sublen[idxvec[sub - 1]], 0, sze - 1, 0);
             printf("%lld\n", out);
-            // for (auto e : segtree)
-            //     cout << e << " ";
-            // cout << "\n";
         }
     }
 }

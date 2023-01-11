@@ -1,0 +1,1 @@
+{"name":"Local: counting_rooms_cses","url":"d:\\CompetitiveProgramming\\Graphs\\counting_rooms_cses.cpp","tests":[{"id":1673462947819,"input":"5 8\n########\n#..#...#\n####.#.#\n#..#...#\n########","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\counting_rooms_cses.cpp","group":"local","local":true}
