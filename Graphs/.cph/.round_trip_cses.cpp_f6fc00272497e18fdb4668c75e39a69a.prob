@@ -1,0 +1,1 @@
+{"name":"Local: round_trip_cses","url":"d:\\CompetitiveProgramming\\Graphs\\round_trip_cses.cpp","tests":[{"id":1673531960866,"input":"5 6\n1 3\n1 2\n5 3\n1 5\n2 4\n4 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\round_trip_cses.cpp","group":"local","local":true}

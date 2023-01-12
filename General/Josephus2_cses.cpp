@@ -1,3 +1,4 @@
+// Done nothing yet.
 #include <bits/stdc++.h>
 #include <iostream>
 
@@ -10,13 +11,16 @@ using namespace std;
 #define scs(t) scanf("%s", t)
 #define scf(t) scanf("%f", &t)
 #define sclf(t) scanf("%lf", &t)
-#define forr(i, j, k, in) for (int i = j; i < k; i += in)
-#define frange(i, j) forr(i, 0, j, 1)
+#define forr(i, j, k) for (int i = j; i < k; i++)
+#define frange(i, j) forr(i, 0, j)
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
 #define PB push_back
+#define f first
+#define s second
 typedef pair<int, int> pii;
 typedef vector<int> vi;
+typedef vector<bool> vb;
 typedef vector<string> vs;
 typedef vector<pii> vii;
 typedef vector<vi> vvi;
@@ -30,33 +34,26 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-
-    int n, q;
+    int n;
     scd(n);
-    scd(q);
-    vector<ulli> dp(n);
-    vector<ulli> seq(n);
-    ulli a;
+    vii vec(n);
+    if (n == 1)
+    {
+        printf("1");
+        return 0;
+    }
     frange(i, n)
     {
-        scanf("%llu", &a);
-        seq[i] = a;
-        if (i >= 1)
-            dp[i] = dp[i - 1] + a;
-        else
-            dp[i] = a;
+        vec[i] = {i + 1, (i + 1) % n};
     }
-    int l, r;
-    frange(i, q)
+    int prev = 0;
+    int idx = 1;
+    frange(i, n)
     {
-        scd(l);
-        scd(r);
-        --l;
-        if (l != 0)
-            printf("%llu\n", dp[r - 1] - dp[l - 1]);
-        else
-            printf("%llu\n", dp[r - 1]);
+        pii curr = vec[idx];
+        vec[prev].s = vec[idx].s;
+        printf("%d ", vec[idx].f);
+        prev = vec[idx].s;
+        idx = vec[prev].s;
     }
-
-    return 0;
 }

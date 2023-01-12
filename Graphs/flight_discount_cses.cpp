@@ -52,25 +52,43 @@ int main()
         dist[a].pb(c);
     }
     vb vis(n + 1, false);
-    priority_queue<pii> pq;
-    pq.push({0, 1});
-    vi vec(n + 1, 1e15);
+    priority_queue<pair<pii, int_>> pq;
+    pq.push({{0, 0}, 1});
+    vvi vec(2, vi(n + 1, 1e15));
     while (pq.size())
     {
-        pii ele = pq.top();
+        pair<pii, int> ele = pq.top();
         pq.pop();
         if (vis[ele.s])
             continue;
         vis[ele.s] = true;
         forr(i, 0, graph[ele.s].size(), 1)
         {
-            vec[graph[ele.s][i].f] = min(vec[graph[ele.s][i].f], dist[ele.s][i] - ele.f);
-            pq.push({-vec[graph[ele.s][i].f], graph[ele.s][i].f});
+            vec[0][graph[ele.s][i].f] = min(vec[0][graph[ele.s][i].f], dist[ele.s][i] - ele.f.f);
+            vec[1][graph[ele.s][i].f] = min({vec[1][graph[ele.s][i].f], dist[ele.s][i] / 2 - ele.f.f, dist[ele.s][i] - ele.f.s});
+            pq.push({{-vec[0][graph[ele.s][i].f], -vec[1][graph[ele.s][i].f]}, graph[ele.s][i].f});
             // cout << graph[ele.s][i].f << " " << vec[graph[ele.s][i].f] << "\n";
         }
     }
-    forr(i, 1, n + 1, 1)
+    int_ i1 = vec[1][n];
+    vec = vvi(2, vi(n + 1, 1e15));
+    pq.push({{0, 0}, 1});
+    vis = vb(n + 1, false);
+    while (pq.size())
     {
-        printf("%lld ", vec[i]);
+        pair<pii, int> ele = pq.top();
+        pq.pop();
+        if (vis[ele.s])
+            continue;
+        vis[ele.s] = true;
+        forr(i, 0, graph[ele.s].size(), 1)
+        {
+            vec[0][graph[ele.s][i].f] = min(vec[0][graph[ele.s][i].f], dist[ele.s][i] - ele.f.s);
+            vec[1][graph[ele.s][i].f] = min({vec[1][graph[ele.s][i].f], dist[ele.s][i] / 2 - ele.f.s, dist[ele.s][i] - ele.f.f});
+            pq.push({{-vec[1][graph[ele.s][i].f], -vec[0][graph[ele.s][i].f]}, graph[ele.s][i].f});
+            // cout << graph[ele.s][i].f << " " << vec[graph[ele.s][i].f] << "\n";
+        }
     }
+
+    printf("%lld ", min(i1, vec[1][n]));
 }
