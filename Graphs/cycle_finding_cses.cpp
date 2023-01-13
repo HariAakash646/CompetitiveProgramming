@@ -22,6 +22,7 @@ typedef vector<int> vi;
 typedef vector<string> vs;
 typedef vector<pii> vii;
 typedef vector<vi> vvi;
+typedef vector<bool> vb;
 typedef map<int, int> mpii;
 typedef set<int> seti;
 typedef multiset<int> mseti;
@@ -30,56 +31,64 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
-vvi graph;
-vi indeg;
-queue<int> q;
-vi topo;
-
-void topo_bfs(int node)
-{
-    topo.pb(node);
-    for (auto e : graph[node])
-    {
-        indeg[e]--;
-        if (indeg[e] == 0)
-            q.push(e);
-    }
-}
+lli inf = 1e13;
 
 int main()
 {
     int n, m;
     scd(n);
     scd(m);
-    graph = vvi(n + 1);
-    indeg = vi(n + 1, 0);
-    int a, b;
+    vector<tuple<int, int, int>> graph(n + 1);
+    vector<lli> cost(n + 1, inf);
+    vi prev(n + 1, -1);
+    cost[1] = 0;
+    int a, b, c;
     frange(i, m)
     {
         scd(a);
         scd(b);
-        graph[a].pb(b);
-        indeg[b]++;
+        scd(c);
+        graph.pb({a, b, c});
     }
-    forr(i, 1, n + 1, 1)
+    int cyc = -1;
+    frange(i, n)
     {
-        if (indeg[i] == 0)
+        for (auto e : graph)
         {
-            q.push(i);
+            tie(a, b, c) = e;
+            if (i == n - 1 && cost[a] + c < cost[b])
+            {
+                cyc = b;
+            }
+            if (cost[a] + c < cost[b])
+                prev[b] = a;
+            cost[b] = min(cost[b], cost[a] + c);
         }
     }
-    while (q.size())
+    if (cyc != -1)
     {
-        topo_bfs(q.front());
-        q.pop();
+        printf("YES\n");
+        frange(i, n)
+        {
+            cyc = prev[cyc];
+        }
+        vi cycle;
+        for (int v = cyc;; v = prev[v])
+        {
+            cycle.pb(v);
+            if (v == cyc && cycle.size() > 1)
+            {
+                break;
+            }
+        }
+        reverse(all(cycle));
+        for (auto e : cycle)
+        {
+            printf("%d ", e);
+        }
     }
-    if (topo.size() != n)
+    else
     {
-        printf("IMPOSSIBLE");
-        return 0;
-    }
-    for (auto e : topo)
-    {
-        printf("%d ", e);
+        printf("NO");
     }
 }

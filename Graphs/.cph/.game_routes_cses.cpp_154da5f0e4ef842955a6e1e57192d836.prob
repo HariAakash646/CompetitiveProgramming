@@ -1,0 +1,1 @@
+{"name":"Local: game_routes_cses","url":"d:\\CompetitiveProgramming\\Graphs\\game_routes_cses.cpp","tests":[{"id":1673628524032,"input":"4 5\n1 2\n2 4\n1 3\n3 4\n1 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\game_routes_cses.cpp","group":"local","local":true}

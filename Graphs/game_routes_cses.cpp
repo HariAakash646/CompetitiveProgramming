@@ -31,9 +31,12 @@ typedef long long int lli;
 typedef unsigned long long int ulli;
 
 vvi graph;
+vvi child;
 vi indeg;
 queue<int> q;
 vi topo;
+
+lli mod = 1e9 + 7;
 
 void topo_bfs(int node)
 {
@@ -52,6 +55,7 @@ int main()
     scd(n);
     scd(m);
     graph = vvi(n + 1);
+    child = vvi(n + 1);
     indeg = vi(n + 1, 0);
     int a, b;
     frange(i, m)
@@ -59,6 +63,7 @@ int main()
         scd(a);
         scd(b);
         graph[a].pb(b);
+        child[b].pb(a);
         indeg[b]++;
     }
     forr(i, 1, n + 1, 1)
@@ -73,13 +78,15 @@ int main()
         topo_bfs(q.front());
         q.pop();
     }
-    if (topo.size() != n)
-    {
-        printf("IMPOSSIBLE");
-        return 0;
-    }
+    vector<lli> ways(n + 1, 0);
+    ways[1] = 1;
     for (auto e : topo)
     {
-        printf("%d ", e);
+        for (auto k : child[e])
+        {
+            ways[e] += ways[k];
+            ways[e] %= mod;
+        }
     }
+    printf("%lld", ways[n]);
 }

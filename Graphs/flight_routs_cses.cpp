@@ -1,3 +1,5 @@
+// Not working
+
 #include <bits/stdc++.h>
 #include <iostream>
 
@@ -22,6 +24,7 @@ typedef vector<int> vi;
 typedef vector<string> vs;
 typedef vector<pii> vii;
 typedef vector<vi> vvi;
+typedef vector<bool> vb;
 typedef map<int, int> mpii;
 typedef set<int> seti;
 typedef multiset<int> mseti;
@@ -30,56 +33,50 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
-vvi graph;
-vi indeg;
-queue<int> q;
-vi topo;
-
-void topo_bfs(int node)
-{
-    topo.pb(node);
-    for (auto e : graph[node])
-    {
-        indeg[e]--;
-        if (indeg[e] == 0)
-            q.push(e);
-    }
-}
+lli inf = 1e14;
 
 int main()
 {
-    int n, m;
+    int n, m, k;
     scd(n);
     scd(m);
-    graph = vvi(n + 1);
-    indeg = vi(n + 1, 0);
-    int a, b;
+    scd(k);
+    vector<vector<pii>> graph(n + 1);
+    vector<multiset<lli>> dist(n + 1);
+    dist[1] = {0};
+    int a, b, c;
     frange(i, m)
     {
         scd(a);
         scd(b);
-        graph[a].pb(b);
-        indeg[b]++;
+        scd(c);
+        graph[a].pb({b, c});
     }
-    forr(i, 1, n + 1, 1)
+    priority_queue<pair<lli, int>> pq;
+    pq.push({0, 1});
+    int idx = 0;
+    bool out = false;
+    while (pq.size())
     {
-        if (indeg[i] == 0)
+        auto p = pq.top();
+        pq.pop();
+        for (auto e : graph[p.s])
         {
-            q.push(i);
+            int nx = e.f;
+            int w = e.s;
+            for (auto d : dist[p.s])
+            {
+                dist[nx].insert(d + w);
+                if (dist[nx].size() > k)
+                    dist[nx].erase(prev(dist[nx].end()));
+
+                idx++;
+            }
+            pq.push(pair<lli, int>{-(*dist[nx].begin()), nx});
         }
     }
-    while (q.size())
+    for (auto e : dist[n])
     {
-        topo_bfs(q.front());
-        q.pop();
-    }
-    if (topo.size() != n)
-    {
-        printf("IMPOSSIBLE");
-        return 0;
-    }
-    for (auto e : topo)
-    {
-        printf("%d ", e);
+        printf("%lld ", e);
     }
 }
