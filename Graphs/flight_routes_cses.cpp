@@ -1,3 +1,4 @@
+// TLE solution. Better sol in editorial usaco.
 #include <bits/stdc++.h>
 #include <iostream>
 
