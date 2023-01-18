@@ -1,0 +1,1 @@
+{"name":"Local: triathalon","url":"d:\\CompetitiveProgramming\\INOIPRAC\\triathalon.cpp","tests":[{"id":1674051844317,"input":"3\n18 7 6 \n23 10 27\n20 9 14","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\INOIPRAC\\triathalon.cpp","group":"local","local":true}
