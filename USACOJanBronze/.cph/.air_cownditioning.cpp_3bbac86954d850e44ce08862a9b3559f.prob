@@ -1,0 +1,1 @@
+{"name":"Local: air_cownditioning","url":"d:\\CompetitiveProgramming\\USACOJanBronze\\air_cownditioning.cpp","tests":[{"id":1674882844164,"input":"2 4\n1 5 2\n7 9 3\n2 9 2 3\n1 6 2 8\n1 2 4 2\n6 9 1 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\USACOJanBronze\\air_cownditioning.cpp","group":"local","local":true}

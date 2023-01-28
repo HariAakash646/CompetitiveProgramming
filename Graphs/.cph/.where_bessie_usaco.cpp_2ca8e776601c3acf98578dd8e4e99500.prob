@@ -1,0 +1,1 @@
+{"name":"Local: where_bessie_usaco","url":"d:\\CompetitiveProgramming\\Graphs\\where_bessie_usaco.cpp","tests":[{"id":1674934550830,"input":"4\nABBC\nBBBC\nAABB\nABBC","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\where_bessie_usaco.cpp","group":"local","local":true}
