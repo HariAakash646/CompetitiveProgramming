@@ -1,0 +1,1 @@
+{"name":"Local: moo_route","url":"d:\\CompetitiveProgramming\\USACOSilverJan2023\\moo_route.cpp","tests":[{"id":1674980346991,"input":"2\n2 4","output":""},{"id":1674980736685,"input":"3\n2 4 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\USACOSilverJan2023\\moo_route.cpp","group":"local","local":true}

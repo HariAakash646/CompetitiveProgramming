@@ -15,6 +15,8 @@ using namespace std;
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
 #define pb push_back
+#define f first
+#define s second
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -32,23 +34,22 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
     int n;
-    cin >> n;
-    string bit;
-    cin >> str;
-    vi vec(n);
+    scd(n);
+    vector<mpii> svec(n);
+    vector<int> sze(n);
     frange(i, n)
     {
-        vec[i] = str[i] - '0';
-    }
-    int m;
-    cin >> m;
-    frange(i, m)
-    {
-        int idx;
-        cin >> idx;
-        vec[idx] = (vec[idx] + 1) % 2;
+        int k;
+        scd(k);
+        lli sz = 0;
+        frange(j, k)
+        {
+            int p, q;
+            scd(p);
+            scd(q);
+            sze[i] += q;
+            svec[i][p] = q;
+        }
     }
 }

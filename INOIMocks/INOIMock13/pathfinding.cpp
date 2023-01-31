@@ -15,6 +15,8 @@ using namespace std;
 #define all(cont) cont.begin(), cont.end()
 #define MP make_pair
 #define pb push_back
+#define f first
+#define s second
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<string> vs;
@@ -30,25 +32,31 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
+bool cmp(pair<pii, int> x, pair<pii, int> y)
+{
+    if (x.f.s < y.f.s)
+        return true;
+    else
+        return false;
+}
+
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
     int n;
-    cin >> n;
-    string bit;
-    cin >> str;
-    vi vec(n);
+    scd(n);
+    vector<pair<pii, int>> vec(n);
     frange(i, n)
     {
-        vec[i] = str[i] - '0';
+        scd(vec[i].f.s);
+        scd(vec[i].f.f);
+        vec[i].s = i + 1;
     }
-    int m;
-    cin >> m;
-    frange(i, m)
+    sort(all(vec));
+    vector<vector<pii>> graph(n + 1);
+    graph[0].pb({vec[0].s, (vec[0].f.f + vec[0].f.s)});
+    frange(i, n)
     {
-        int idx;
-        cin >> idx;
-        vec[idx] = (vec[idx] + 1) % 2;
+        auto e = vec[i];
+        graph[e.s].pb();
     }
 }
