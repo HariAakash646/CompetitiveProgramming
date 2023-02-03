@@ -1,0 +1,1 @@
+{"name":"Local: prob4","url":"d:\\CompetitiveProgramming\\Contests\\cfdiv4\\prob4.cpp","tests":[{"id":1675436293268,"input":"5\n2\naa\n7\nabcabcd\n5\naaaaa\n10\npaiumoment\n4\naazz","output":"2\n7\n2\n10\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\cfdiv4\\prob4.cpp","group":"local","local":true}
