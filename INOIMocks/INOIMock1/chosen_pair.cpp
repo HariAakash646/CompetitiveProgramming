@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <iostream>
 
 using namespace std;
 
@@ -13,36 +12,27 @@ using namespace std;
 #define forr(i, j, k) for (int i = j; i < k; i++)
 #define frange(i, j) forr(i, 0, j)
 #define all(cont) cont.begin(), cont.end()
-#define MP make_pair
+#define mp make_pair
 #define pb push_back
 #define f first
 #define s second
-typedef pair<int, int> pii;
-typedef vector<int> vi;
-typedef vector<string> vs;
-typedef vector<bool> vb;
-typedef vector<pii> vii;
-typedef vector<vi> vvi;
-typedef vector<bool> vb;
-typedef map<int, int> mpii;
-typedef set<int> seti;
-typedef multiset<int> mseti;
 typedef long int li;
 typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+typedef vector<bool> vb;
+typedef vector<lli> vll;
+typedef vector<string> vs;
+typedef vector<pii> vii;
+typedef vector<vi> vvi;
+typedef map<int, int> mpii;
+typedef set<int> seti;
+typedef multiset<int> mseti;
+typedef long double ld;
 
-int log2func(int n)
-{
-    int x = 1;
-    int i = 0;
-    while (x < n)
-    {
-        x *= 2;
-        i++;
-    }
-    return i;
-}
+int inf = 1e9 + 10;
 
 int main()
 {
@@ -57,17 +47,22 @@ int main()
         vec.insert(a);
     }
     n = vec.size();
-    // vi dp(n + 1);
-    // dp[1] = 0;
-    // dp[2] = 1;
-    // forr(i, 3, n + 1)
-    // {
-    //     dp[i] = dp[i / 2] + dp[i / 2 + (i % 2)] + 1;
-    // }
-    int out = log2func(n) + log2func(n / 2);
-    if (out <= q)
+
+    vvi dp(n + 1, vi(2));
+
+    forr(i, 2, n + 1)
+    {
+        dp[i][0] = inf;
+        dp[i][1] = inf;
+        forr(j, 1, i)
+        {
+            dp[i][0] = min(dp[i][0], 1 + max(dp[j][0], dp[i - j][0]));
+            dp[i][1] = min(dp[i][1], max({1 + dp[j][1], 1 + dp[i - j][1], 1 + dp[j][0] + dp[i - j][0]}));
+        }
+    }
+    if (dp[n][1] <= q)
         printf("YES");
     else
         printf("NO");
-    printf("\n%d", out);
+    // printf("\n%d", out);
 }

@@ -46,100 +46,34 @@ int main()
         cin >> str1;
         cin >> str2;
         bool out = false;
-        // string done = "";
-        // bool doneb = false;
-        int pos;
-        // frange(i, n - 1)
-        // {
-        //     if (str1[i] != str2[i])
-        //     {
-        //         out = true;
-        //         pos = i;
-        //         break;
-        //     }
-        //     if (str1[i] == l || str2[i] == l)
-        //     {
-        //         out = true;
-        //         doneb = true;
-        //         done = (str1[i] == l) ? str1 : str2;
-        //         break;
-        //     }
-        // }
-        // if (out && doneb)
-        // {
-        //     cout << done << "\n";
-        // }
-        // else if (out)
-        // {
-        //     forr(i, pos + 1, n)
-        //     {
-        //         if (l >= str1[i])
-        //         {
-        //             string st(1, l);
-        //             str1.replace(i, 1, st);
-        //             cout << str1 << "\n";
-        //             break;
-        //         }
-        //         else if (l <= str2[i])
-        //         {
-        //             string st(1, l);
-        //             str2.replace(i, 1, st);
-        //             cout << str2 << "\n";
-        //             break;
-        //         }
-        //     }
-        // }
-        // else
-        // {
-        //     if (l >= str1[n - 1] && l <= str2[n - 1])
-        //     {
-        //         str2.erase(n - 1);
-        //         cout << str2 << l << "\n";
-        //     }
-        //     else
-        //     {
-        //         cout << "NO\n";
-        //     }
-        // }
-        for (auto e : str1)
+
+        frange(i, 27)
         {
-            if (e == l)
+            for (auto e : str1)
             {
-                out = true;
-            }
-        }
-        if (out)
-        {
-            cout << str1 << "\n";
-            return 0;
-        }
-        char e = str1[n - 1];
-        char e1;
-        str1.erase(n - 1);
-        frange(i, 26)
-        {
-            e1 = e + i;
-            if (e1 > 'z')
-            {
-                e1 = 'a';
-                char tmp = str1[n - 2];
-                str1.erase(n - 2);
-                str1 += tmp + 1;
-            }
-            if (e1 == l)
-            {
-                if (str1 + e1 <= str2)
+                if (e == l)
                 {
+                    cout << str1 << "\n";
                     out = true;
                     break;
                 }
             }
+            if (out || str1 == str2)
+                break;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                if (str1[i] == 'z')
+                {
+                    str1[i] = 'a';
+                }
+                else
+                {
+                    str1[i]++;
+                    break;
+                }
+            }
         }
-        if (out)
-        {
-            cout << str1 + e1 << "\n";
-        }
-        else
+        if (!out)
             cout << "NO\n";
     }
 }

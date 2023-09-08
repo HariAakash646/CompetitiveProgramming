@@ -1,105 +1,77 @@
 #include <bits/stdc++.h>
-#include <iostream>
 
 using namespace std;
 
 #define scd(t) scanf("%d", &t)
-#define scld(t) scanf("%ld", &t)
 #define sclld(t) scanf("%lld", &t)
-#define scc(t) scanf("%c", &t)
-#define scs(t) scanf("%s", t)
-#define scf(t) scanf("%f", &t)
-#define sclf(t) scanf("%lf", &t)
 #define forr(i, j, k) for (int i = j; i < k; i++)
 #define frange(i, j) forr(i, 0, j)
 #define all(cont) cont.begin(), cont.end()
-#define MP make_pair
+#define mp make_pair
 #define pb push_back
 #define f first
 #define s second
+typedef long long int lli;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
-typedef vector<string> vs;
 typedef vector<bool> vb;
+typedef vector<lli> vll;
+typedef vector<string> vs;
 typedef vector<pii> vii;
 typedef vector<vi> vvi;
-typedef vector<bool> vb;
 typedef map<int, int> mpii;
 typedef set<int> seti;
 typedef multiset<int> mseti;
-typedef long int li;
-typedef unsigned long int uli;
-typedef long long int lli;
-typedef unsigned long long int ulli;
+typedef long double ld;
 
-int rm, cm, n;
-vvi grid;
-vector<vb> vis;
-vector<vb> sub;
-int tot;
+set<pii> field;
+map<pii, bool> vis;
+int v = 0;
 
-void floodfill(int r, int c)
+void dfs(pii p)
 {
-    if (vis[r][c])
-        return;
-    vis[r][c] = true;
-    if (!grid[r][c])
-        return;
-    tot += 4;
-    if (r - 1 >= 0)
-    {
-        floodfill(r - 1, c);
-        if (grid[r - 1][c])
-            --tot;
-    }
-    if (c - 1 >= 0)
-    {
-
-        floodfill(r, c - 1);
-        if (grid[r][c - 1])
-            --tot;
-    }
-    if (c + 1 < cm)
-    {
-        floodfill(r, c + 1);
-        if (grid[r][c + 1])
-            --tot;
-    }
-    if (r + 1 < rm)
-    {
-        floodfill(r + 1, c);
-        if (grid[r + 1][c])
-            --tot;
-    }
+    if (!field.count({p.f + 1, p.s}))
+        v++;
+    if (!field.count({p.f - 1, p.s}))
+        v++;
+    if (!field.count({p.f, p.s + 1}))
+        v++;
+    if (!field.count({p.f, p.s - 1}))
+        v++;
+    vis[p] = true;
+    if (field.count({p.f + 1, p.s}) && !vis[{p.f + 1, p.s}])
+        dfs({p.f + 1, p.s});
+    if (field.count({p.f - 1, p.s}) && !vis[{p.f - 1, p.s}])
+        dfs({p.f - 1, p.s});
+    if (field.count({p.f, p.s + 1}) && !vis[{p.f, p.s + 1}])
+        dfs({p.f, p.s + 1});
+    if (field.count({p.f, p.s - 1}) && !vis[{p.f, p.s - 1}])
+        dfs({p.f, p.s - 1});
 }
 
 int main()
 {
-    scd(rm);
-    scd(cm);
+    int r, c, n;
+    scd(r);
+    scd(c);
     scd(n);
-    grid = vvi(rm, vi(cm, 0));
-    vis = vector<vb>(rm, vb(cm, false));
-    sub = vector<vb>(rm, vb(cm, false));
-    int a, b;
+
     frange(i, n)
     {
+        int a, b;
         scd(a);
         scd(b);
-        grid[a - 1][b - 1] = 1;
+        field.insert({a, b});
     }
-    int mt = 0;
-    frange(i, rm)
+    int ma = 0;
+    for (auto p : field)
     {
-        frange(j, cm)
+        if (!vis[p])
         {
-            if (!vis[i][j] && grid[i][j])
-            {
-                tot = 0;
-                floodfill(i, j);
-                mt = max(tot, mt);
-            }
+            v = 0;
+            dfs(p);
+            ma = max(ma, v);
         }
     }
-    printf("%d", mt);
+    printf("%d", ma);
 }

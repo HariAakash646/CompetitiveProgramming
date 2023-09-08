@@ -43,10 +43,10 @@ int main()
     {
         scd(con[i]);
     }
-    vector<lli> dp(n + 2);
+    vector<lli> dp(n + 2, 0LL);
     forr(i, 2, n + 2)
     {
-        dp[i] = ((2 * dp[i - 1]) % mod + 2 - dp[con[i - 1]]) % mod;
+        dp[i] = (((2 * dp[i - 1]) % mod) + 2 - dp[con[i - 1]]) % mod;
     }
-    printf("%d", dp[n + 1]);
+    printf("%lld", dp[n + 1]);
 }
