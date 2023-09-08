@@ -1,0 +1,1 @@
+{"name":"Local: probB","url":"d:\\CompetitiveProgramming\\Contests\\ARC160\\probB.cpp","tests":[{"id":1684068494533,"input":"4\n1\n2\n5\n998244353\n","output":"1\n4\n17\n727512986\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\ARC160\\probB.cpp","group":"local","local":true}

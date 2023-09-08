@@ -1,0 +1,1 @@
+{"name":"Local: city_attractions","url":"d:\\CompetitiveProgramming\\OI_Problems\\Balkan_OI\\city_attractions.cpp","tests":[{"id":1692809492310,"input":"5 4\n1 1 3 2 4\n1 2\n1 3\n2 4\n2 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\OI_Problems\\Balkan_OI\\city_attractions.cpp","group":"local","local":true}

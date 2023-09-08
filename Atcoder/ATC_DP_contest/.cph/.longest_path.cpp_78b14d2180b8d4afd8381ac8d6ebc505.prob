@@ -1,0 +1,1 @@
+{"name":"Local: longest_path","url":"d:\\CompetitiveProgramming\\Atcoder\\ATC_DP_contest\\longest_path.cpp","tests":[{"id":1683364519351,"input":"4 5\n1 2\n1 3\n3 2\n2 4\n3 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Atcoder\\ATC_DP_contest\\longest_path.cpp","group":"local","local":true}

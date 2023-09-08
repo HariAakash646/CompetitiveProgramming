@@ -1,0 +1,1 @@
+{"name":"Local: planets_and_kingdoms_cses","url":"d:\\CompetitiveProgramming\\Graphs\\planets_and_kingdoms_cses.cpp","tests":[{"id":1687675212830,"input":"5 6\n1 2\n2 3\n3 1\n3 4\n4 5\n5 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\planets_and_kingdoms_cses.cpp","group":"local","local":true}

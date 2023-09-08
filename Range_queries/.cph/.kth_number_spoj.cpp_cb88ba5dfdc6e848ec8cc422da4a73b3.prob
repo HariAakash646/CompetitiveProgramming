@@ -1,0 +1,1 @@
+{"name":"Local: kth_number_spoj","url":"d:\\CompetitiveProgramming\\Range_queries\\kth_number_spoj.cpp","tests":[{"id":1688996924860,"input":"7 3\n1 5 2 6 3 7 4\n2 5 3\n4 4 1\n1 7 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Range_queries\\kth_number_spoj.cpp","group":"local","local":true}

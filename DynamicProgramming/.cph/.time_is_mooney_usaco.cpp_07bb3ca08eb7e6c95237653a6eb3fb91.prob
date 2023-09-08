@@ -1,0 +1,1 @@
+{"name":"Local: time_is_mooney_usaco","url":"d:\\CompetitiveProgramming\\DynamicProgramming\\time_is_mooney_usaco.cpp","tests":[{"id":1685096409624,"input":"3 3 1\n0 10 20\n1 2\n2 3\n3 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\DynamicProgramming\\time_is_mooney_usaco.cpp","group":"local","local":true}

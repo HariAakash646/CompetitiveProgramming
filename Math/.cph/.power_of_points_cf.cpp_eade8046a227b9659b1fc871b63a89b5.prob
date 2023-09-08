@@ -1,0 +1,1 @@
+{"name":"Local: power_of_points_cf","url":"d:\\CompetitiveProgramming\\Math\\power_of_points_cf.cpp","tests":[{"id":1691425793746,"input":"3\n3\n1 4 3\n5\n1 2 5 7 1\n4\n1 10 100 1000\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Math\\power_of_points_cf.cpp","group":"local","local":true}

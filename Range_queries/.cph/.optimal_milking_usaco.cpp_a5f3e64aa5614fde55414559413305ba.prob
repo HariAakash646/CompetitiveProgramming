@@ -1,0 +1,1 @@
+{"name":"Local: optimal_milking_usaco","url":"d:\\CompetitiveProgramming\\Range_queries\\optimal_milking_usaco.cpp","tests":[{"id":1693223264408,"input":"5 3\n1\n2\n3\n4\n5\n5 2\n2 7\n1 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Range_queries\\optimal_milking_usaco.cpp","group":"local","local":true}

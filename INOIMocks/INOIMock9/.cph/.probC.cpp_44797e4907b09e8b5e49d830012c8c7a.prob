@@ -1,0 +1,1 @@
+{"name":"Local: probC","url":"d:\\CompetitiveProgramming\\INOIMocks\\INOIMock9\\probC.cpp","tests":[{"id":1686225753202,"input":"10 6\n3 9\n9 5\n1 8\n8 5\n7 4\n6 0\n3 6\n6 2\n0 7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\INOIMocks\\INOIMock9\\probC.cpp","group":"local","local":true}

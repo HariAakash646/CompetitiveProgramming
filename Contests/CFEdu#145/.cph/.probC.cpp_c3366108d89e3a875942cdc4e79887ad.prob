@@ -1,0 +1,1 @@
+{"name":"Local: probC","url":"d:\\CompetitiveProgramming\\Contests\\CFEdu#145\\probC.cpp","tests":[{"id":1679567230146,"input":"4\n3 2\n2 0\n2 2\n4 6\n","output":""},{"id":1679568394323,"input":"1\n2 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\CFEdu#145\\probC.cpp","group":"local","local":true}

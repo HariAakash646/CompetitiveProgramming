@@ -1,0 +1,1 @@
+{"name":"Local: monsters_cses","url":"d:\\CompetitiveProgramming\\Graphs\\monsters_cses.cpp","tests":[{"id":1681199252685,"input":"5 8\n########\n#M..A..#\n#.#.M#.#\n#M#..#..\n#.######","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\monsters_cses.cpp","group":"local","local":true}

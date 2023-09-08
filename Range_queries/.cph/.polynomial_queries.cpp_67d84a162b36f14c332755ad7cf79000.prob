@@ -1,0 +1,1 @@
+{"name":"Local: polynomial_queries","url":"d:\\CompetitiveProgramming\\Range_queries\\polynomial_queries.cpp","tests":[{"id":1693244161133,"input":"5 3\n4 2 3 1 7\n2 1 5\n1 1 5\n2 1 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Range_queries\\polynomial_queries.cpp","group":"local","local":true}

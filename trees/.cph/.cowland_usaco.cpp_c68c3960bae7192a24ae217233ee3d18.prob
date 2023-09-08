@@ -1,0 +1,1 @@
+{"name":"Local: cowland_usaco","url":"d:\\CompetitiveProgramming\\trees\\cowland_usaco.cpp","tests":[{"id":1685612625555,"input":"5 5\n1 2 4 8 16\n1 2\n1 3\n3 4\n3 5\n2 1 5\n1 1 16\n2 3 5\n2 1 5\n2 1 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\trees\\cowland_usaco.cpp","group":"local","local":true}

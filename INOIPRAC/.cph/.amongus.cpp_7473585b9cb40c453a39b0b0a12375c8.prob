@@ -1,0 +1,1 @@
+{"name":"Local: amongus","url":"d:\\CompetitiveProgramming\\INOIPRAC\\amongus.cpp","tests":[{"id":1683182005017,"input":"3\n3 2\n1 1 2\n1 3 2\n2 0\n2 2\n2 1 2\n1 1 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\INOIPRAC\\amongus.cpp","group":"local","local":true}

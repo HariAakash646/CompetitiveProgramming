@@ -1,0 +1,1 @@
+{"name":"Local: even_outdegree_edges_cses","url":"d:\\CompetitiveProgramming\\trees\\even_outdegree_edges_cses.cpp","tests":[{"id":1686887143501,"input":"4 4\n1 2\n2 3\n3 4\n1 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\trees\\even_outdegree_edges_cses.cpp","group":"local","local":true}
