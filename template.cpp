@@ -24,6 +24,20 @@ typedef set<int> seti;
 typedef multiset<int> mseti;
 typedef long double ld;
 
+
+void usaco()
+{
+    freopen("/media/hariaakash646/785EF1075EF0BF46/CompetitiveProgramming/input.in", "r", stdin);
+//    freopen("problem.out", "w", stdout);
+}
+
+void fastio()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+}
+
 // Disjoint set datastructure code
 
 int findf(int x)
@@ -480,15 +494,56 @@ struct LazySegTree
     }
 };
 
+// Statuc CHT line container
+struct line {
+    lli m, c;
+
+    lli eval(lli x) {return m * x + c;}
+
+    ld intersect(line l) {return ld(c - l.c) / ld(l.m - m);}
+};
+
+// Dynamic CHT
+// Used for finding Maximum
+// For minimum use negative slope
+struct Line {
+    mutable lli k, m, p;
+    bool operator<(const Line& o) const { return k < o.k; }
+    bool operator<(lli x) const { return p < x; }
+};
+
+struct LineContainer : multiset<Line, less<>> {
+    // (for doubles, use inf = 1/.0, div(a,b) = a/b)
+    static const lli inf = LLONG_MAX;
+    lli div(lli a, lli b) { // floored division
+        return a / b - ((a ^ b) < 0 && a % b); }
+    bool isect(iterator x, iterator y) {
+        if (y == end()) return x->p = inf, 0;
+        if (x->k == y->k) x->p = x->m > y->m ? inf : -inf;
+        else x->p = div(y->m - x->m, x->k - y->k);
+        return x->p >= y->p;
+    }
+    void add(lli k, lli m) {
+        auto z = insert({k, m, 0}), y = z++, x = y;
+        while (isect(y, z)) z = erase(z);
+        if (x != begin() && isect(--x, y)) isect(x, y = erase(y));
+        while ((y = x) != begin() && (--x)->p >= y->p)
+            isect(x, erase(y));
+    }
+    lli query(lli x) {
+        assert(!empty());
+        auto l = *lower_bound(x);
+        return l.k * x + l.m;
+    }
+};
+
+// Mod Inverse
+lli inv(lli a) {
+  return a <= 1 ? a : mod - (mod/a) * inv(mod % a) % mod;
+}
+
 void usaco()
 {
     freopen("problem.in", "r", stdin);
     freopen("problem.out", "w", stdout);
-}
-
-void fastio()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
 }
