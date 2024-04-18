@@ -1,0 +1,1 @@
+{"name":"Local: koxia_game","url":"d:\\CompetitiveProgramming\\CF_road_to_CM\\2000_problems\\koxia_game.cpp","tests":[{"id":1690436864732,"input":"2\n3\n1 2 2\n1 3 3\n5\n3 3 1 3 4\n4 5 2 5 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\CF_road_to_CM\\2000_problems\\koxia_game.cpp","group":"local","local":true}

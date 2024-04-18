@@ -1,0 +1,1 @@
+{"name":"Local: piggyback","url":"d:\\CompetitiveProgramming\\Graphs\\piggyback.cpp","tests":[{"id":1684352191913,"input":"4 4 5 8 8\n1 4\n2 3\n3 4\n4 7\n2 5\n5 6\n6 8\n7 8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\piggyback.cpp","group":"local","local":true}

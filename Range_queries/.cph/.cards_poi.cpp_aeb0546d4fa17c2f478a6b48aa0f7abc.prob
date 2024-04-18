@@ -1,0 +1,1 @@
+{"name":"Local: cards_poi","url":"d:\\CompetitiveProgramming\\Range_queries\\cards_poi.cpp","tests":[{"id":1693227599981,"input":"5\n2 5\n3 4\n6 3\n2 7\n8 9\n2\n3 4\n1 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Range_queries\\cards_poi.cpp","group":"local","local":true}

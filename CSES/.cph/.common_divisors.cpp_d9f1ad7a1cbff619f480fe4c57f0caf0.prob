@@ -1,0 +1,1 @@
+{"name":"Local: common_divisors","url":"d:\\CompetitiveProgramming\\CSES\\common_divisors.cpp","tests":[{"id":1688139496930,"input":"5\n3 14 15 7 9\n","output":""},{"id":1688139998540,"input":"2\n6 16","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\CSES\\common_divisors.cpp","group":"local","local":true}

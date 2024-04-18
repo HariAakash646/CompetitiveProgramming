@@ -1,0 +1,1 @@
+{"name":"Local: tractor_usaco","url":"d:\\CompetitiveProgramming\\Graphs\\tractor_usaco.cpp","tests":[{"id":1681208206654,"input":"5\n0 0 0 3 3\n0 0 0 0 3\n0 9 9 3 3\n9 9 9 3 3\n9 9 9 9 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\tractor_usaco.cpp","group":"local","local":true}

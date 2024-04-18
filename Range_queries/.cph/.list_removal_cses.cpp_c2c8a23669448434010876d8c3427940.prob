@@ -1,0 +1,1 @@
+{"name":"Local: list_removal_cses","url":"d:\\CompetitiveProgramming\\Range_queries\\list_removal_cses.cpp","tests":[{"id":1682251912135,"input":"5\n2 6 1 4 2\n3 1 3 1 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Range_queries\\list_removal_cses.cpp","group":"local","local":true}

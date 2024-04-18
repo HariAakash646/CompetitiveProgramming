@@ -1,0 +1,1 @@
+{"name":"Local: make_equal","url":"d:\\CompetitiveProgramming\\Contests\\ICPC_mock\\make_equal.cpp","tests":[{"id":1679071774692,"input":"2\n2 4 3 1\n2 4 1 3\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\ICPC_mock\\make_equal.cpp","group":"local","local":true}

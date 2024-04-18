@@ -57,7 +57,7 @@ int main()
     int idx = 0;
     frange(i, m)
     {
-        frange(j, vec3[i].s - vec3[i].f + 1)
+        frange(j, vec3[i].s)
         {
             tot += abs(vec1[idx] - vec2[i]);
             idx++;

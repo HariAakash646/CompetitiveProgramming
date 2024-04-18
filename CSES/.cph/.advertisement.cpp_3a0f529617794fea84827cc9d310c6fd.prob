@@ -1,0 +1,1 @@
+{"name":"Local: advertisement","url":"d:\\CompetitiveProgramming\\CSES\\advertisement.cpp","tests":[{"id":1685549707686,"input":"8\n4 1 5 3 3 2 4 1\n","output":""},{"id":1685550590609,"input":"10\n1 1 1 1 1 1 1 1 1 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\CSES\\advertisement.cpp","group":"local","local":true}

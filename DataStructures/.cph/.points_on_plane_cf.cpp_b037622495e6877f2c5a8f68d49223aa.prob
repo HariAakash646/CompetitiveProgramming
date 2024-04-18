@@ -1,0 +1,1 @@
+{"name":"Local: points_on_plane_cf","url":"d:\\CompetitiveProgramming\\DataStructures\\points_on_plane_cf.cpp","tests":[{"id":1688818255435,"input":"5\n0 7\n8 10\n3 4\n5 0\n9 12","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\DataStructures\\points_on_plane_cf.cpp","group":"local","local":true}

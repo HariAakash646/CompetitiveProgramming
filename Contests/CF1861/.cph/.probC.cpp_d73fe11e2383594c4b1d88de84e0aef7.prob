@@ -1,0 +1,1 @@
+{"name":"Local: probC","url":"d:\\CompetitiveProgramming\\Contests\\CF1861\\probC.cpp","tests":[{"id":1693496450148,"input":"7\n++1\n+++1--0\n+0\n0\n++0-+1-+0\n++0+-1+-0\n+1-+0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\CF1861\\probC.cpp","group":"local","local":true}

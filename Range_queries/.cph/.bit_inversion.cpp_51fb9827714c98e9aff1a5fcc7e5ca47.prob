@@ -1,0 +1,1 @@
+{"name":"Local: bit_inversion","url":"d:\\CompetitiveProgramming\\Range_queries\\bit_inversion.cpp","tests":[{"id":1683210041313,"input":"001011\n3\n3 2 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Range_queries\\bit_inversion.cpp","group":"local","local":true}

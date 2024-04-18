@@ -1,0 +1,1 @@
+{"name":"Local: vacation","url":"d:\\CompetitiveProgramming\\Atcoder\\ATC_DP_contest\\vacation.cpp","tests":[{"id":1683358625437,"input":"3\n10 40 70\n20 50 80\n30 60 90\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Atcoder\\ATC_DP_contest\\vacation.cpp","group":"local","local":true}

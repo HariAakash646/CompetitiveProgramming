@@ -1,0 +1,1 @@
+{"name":"Local: training","url":"d:\\CompetitiveProgramming\\INOIPRAC\\training.cpp","tests":[{"id":1691075556282,"input":"2 12\n5 10","output":""},{"id":1691075573716,"input":"4 1\n100 1 6 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\INOIPRAC\\training.cpp","group":"local","local":true}

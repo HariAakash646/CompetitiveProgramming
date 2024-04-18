@@ -1,0 +1,1 @@
+{"name":"Local: swipes","url":"d:\\CompetitiveProgramming\\Contests\\CC99\\swipes.cpp","tests":[{"id":1689777159913,"input":"4\n4\n1 2 2 1\n4\n1 1 1 2\n5\n3 5 2 4 1\n5\n1 2 1 5 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\CC99\\swipes.cpp","group":"local","local":true}

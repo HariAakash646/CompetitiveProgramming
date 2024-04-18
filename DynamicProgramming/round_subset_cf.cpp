@@ -32,13 +32,16 @@ typedef unsigned long int uli;
 typedef long long int lli;
 typedef unsigned long long int ulli;
 
+int inf = 1e9;
+
 int main()
 {
     int n, k;
     scd(n);
     scd(k);
-    vii vec(n);
+    vii vec(n + 1);
     lli a;
+    int d3 = 0;
     frange(i, n)
     {
         sclld(a);
@@ -54,38 +57,31 @@ int main()
             m5++;
             a /= 5;
         }
-        vec[i] = {m2, m5};
+        vec[i + 1] = {m2, m5};
+        d3 += m5;
     }
-    vector<vii> dp(k + 1, vii(n, {0, 0}));
-    forr(i, 1, k + 1)
-    {
-        dp[i][0] = vec[0];
-    }
-    forr(i, 1, k + 1)
-    {
-        forr(j, 1, n)
-        {
-            pii p = vec[j];
-            pii bp = {0, 0};
-            int mv = 0;
-            frange(k, j)
-            {
-                if (min(p.f + dp[i - 1][k].f, p.s + dp[i - 1][k].s) > mv)
-                {
-                    mv = min(p.f + dp[i - 1][k].f, p.s + dp[i - 1][k].s);
-                    bp = {p.f + dp[i - 1][k].f, p.s + dp[i - 1][k].s};
-                }
-            }
+    vvi dp(k + 1, vi(d3 + 1, -inf)), prev(k + 1, vi(d3 + 1, -inf));
 
-            if (min(dp[i][j - 1].f, dp[i][j - 1].s) > mv)
+    prev[0][0] = 0;
+    forr(i, 1, n + 1)
+    {
+        forr(j, 0, k + 1)
+        {
+            forr(l, 0, d3 + 1)
             {
-                dp[i][j] = dp[i][j - 1];
-            }
-            else
-            {
-                dp[i][j] = bp;
-            }
+                dp[j][l] = prev[j][l];
+                if (l - vec[i].s >= 0 && j > 0)
+                {
+                    dp[j][l] = max(dp[j][l], prev[j - 1][l - vec[i].s] + vec[i].f);
+                }
+                        }
         }
+        prev = dp;
     }
-    printf("%d", min(dp[k][n - 1].f, dp[k][n - 1].s));
+    int ma = 0;
+    forr(l, 0, d3 + 1)
+    {
+        ma = max(ma, min(l, dp[k][l]));
+    }
+    printf("%d", ma);
 }

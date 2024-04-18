@@ -1,0 +1,1 @@
+{"name":"Local: tracks_in_snow_boi","url":"d:\\CompetitiveProgramming\\Graphs\\tracks_in_snow_boi.cpp","tests":[{"id":1686132088816,"input":"5 8\nFFR.....\n.FRRR...\n.FFFFF..\n..RRRFFR\n.....FFF","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\tracks_in_snow_boi.cpp","group":"local","local":true}

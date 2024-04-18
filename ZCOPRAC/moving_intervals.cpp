@@ -1,106 +1,193 @@
 #include <bits/stdc++.h>
-#include <iostream>
 
 using namespace std;
 
 #define scd(t) scanf("%d", &t)
-#define scld(t) scanf("%ld", &t)
 #define sclld(t) scanf("%lld", &t)
-#define scc(t) scanf("%c", &t)
-#define scs(t) scanf("%s", t)
-#define scf(t) scanf("%f", &t)
-#define sclf(t) scanf("%lf", &t)
-#define forr(i, j, k, in) for (int i = j; i < k; i += in)
-#define frange(i, j) forr(i, 0, j, 1)
+#define forr(i, j, k) for (int i = j; i < k; i++)
+#define frange(i, j) forr(i, 0, j)
 #define all(cont) cont.begin(), cont.end()
-#define MP make_pair
+#define mp make_pair
 #define pb push_back
 #define f first
 #define s second
+typedef long long int lli;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
+typedef vector<bool> vb;
+typedef vector<lli> vll;
 typedef vector<string> vs;
 typedef vector<pii> vii;
 typedef vector<vi> vvi;
 typedef map<int, int> mpii;
 typedef set<int> seti;
 typedef multiset<int> mseti;
-typedef long int li;
-typedef unsigned long int uli;
-typedef long long int lli;
-typedef unsigned long long int ulli;
+typedef long double ld;
 
-int main()
+
+void usaco()
 {
+    freopen("/media/hariaakash646/785EF1075EF0BF46/CompetitiveProgramming/input.in", "r", stdin);
+//    freopen("problem.out", "w", stdout);
+}
+
+int main() {
+    // usaco();
     int t;
     scd(t);
-    while (t--)
-    {
+
+    frange(_, t) {
         int c, n, k;
         scd(c);
         scd(n);
         scd(k);
-        int r, l;
-        vii vec(n + 2);
-        vec[0] = {0, 0};
-        vec[n + 1] = {c + 1, c + 1};
-        frange(i, n)
-        {
-            scd(vec[i + 1].s);
-            scd(vec[i + 1].f);
+
+        vii rang(n);
+        vii vec;
+        vii pos(n, mp(-1, -1));
+
+        frange(i, n) {
+            scd(rang[i].f);
+            scd(rang[i].s);
+            vec.pb(mp(rang[i].f, i));
+            vec.pb(mp(rang[i].s, i));
         }
-        sort(vec.begin(), vec.end());
-        pii pr;
-        if (k == 1)
-        {
-            forr(i, 1, n + 1, 1)
-            {
-                if (vec[i].f >= vec[i + 1].s)
-                {
-                    int idx;
-                    if (vec[i].f - vec[i].s > vec[i + 1].f - vec[i + 1].s)
-                    {
-                        pr = vec[i + 1];
-                        idx = i + 1;
+
+        sort(all(vec));
+
+        frange(i, vec.size()) {
+            auto p = vec[i];
+            if(pos[p.s].f == -1) {
+                pos[p.s].f = i;
+            }
+            else {
+                pos[p.s].s = i;
+            }
+        }
+
+        pair<pii, pii> inter = mp(mp(-1, -1), mp(-1, -1));
+
+        bool done = true;
+        frange(i, n) {
+            
+            seti st;
+            if(pos[i].f != pos[i].s-1) {
+                forr(j, pos[i].f+1, pos[i].s) {
+                    st.insert(vec[j].s);
+                }
+            }
+            for(int j=pos[i].f-1; j>=0; j--) {
+                if(vec[j].f == vec[pos[i].f].f) st.insert(vec[j].s);
+                else break;
+            }
+            for(int j=pos[i].s+1; j<vec.size(); j++) {
+                if(vec[j].f == vec[pos[i].s].f) st.insert(vec[j].s);
+                else break;
+            }
+            if(st.size() == 0) continue;
+            if(inter.f.f != -1) {
+                if(inter.f.s > 1) {
+                    if(st.size() > 1) {
+                        done = false;
+                        break;
                     }
-                    else
-                    {
-                        pr = vec[i];
-                        idx = i;
-                    }
-                    int dif = pr.f - pr.s + 1;
-                    vec.erase(vec.begin() + idx);
-                    bool out = true;
-                    forr(j, 0, n + 1, 1)
-                    {
-                        if (vec[j + 1].s - vec[j].f - 1 >= dif)
-                        {
-                            vec.pb({vec[j].f + dif, vec[j].f + 1});
-                            out = false;
+                    else {
+                        if(*st.begin() == inter.f.f) continue;
+                        else {
+                            done = false;
                             break;
                         }
                     }
-                    if (out)
-                    {
-                        vec.pb(pr);
+                }
+                else {
+                    if(st.size() > 1) {
+                        if(st.find(inter.f.f) != st.end()) {
+                            inter.f.f = i;
+                            inter.f.s = st.size();
+                        }
+                        else {
+                            done = false;
+                            break;
+                        }
                     }
-                    break;
+                    else {
+                        if(*st.begin() == inter.f.f) {
+                            inter.s = mp(i, 1);
+                        }
+                        else {
+                            done = false;
+                            break;
+                        }
+                    }
                 }
             }
-            sort(vec.begin(), vec.end());
-        }
-        bool out = true;
-        forr(i, 1, n, 1)
-        {
-            if (vec[i].f >= vec[i + 1].s)
-            {
-                cout << "BAD\n";
-                out = false;
-                break;
+            else {
+                inter.f = mp(i, st.size());
             }
         }
-        if (out)
-            cout << "GOOD\n";
+        // printf("%d %d %d %d\n", inter.f.f, inter.f.s, inter.s.f, inter.s.s);
+        if(k == 0) {
+            if(inter.f.f != -1) {
+                printf("Bad\n");
+            }
+            else printf("Good\n");
+        }
+        else {
+            if(!done) {
+                printf("Bad\n");
+            }
+            else {
+                multiset<pii> st;
+                for(auto p : rang) st.insert(p);
+                bool w = false;
+                if(inter.f.f != -1) {
+                    auto e = rang[inter.f.f];
+                    st.erase(st.find(rang[inter.f.f]));
+                    int curr = 1;
+                    for(auto p : st) {
+                        if(p.f - curr >= e.s - e.f + 1) {
+                            w = true;
+                            break;
+                        }
+                        curr = max(curr, p.s+1);
+                    }
+                    if(c - curr + 1 >= e.s - e.f + 1) w = true;
+                    st.insert(e);
+                    if(inter.f.s == 1) {
+                        
+                        int v = vec[pos[inter.f.f].f+1].s;
+                        auto e = rang[v];
+                        st.erase(st.find(rang[v]));
+                        int curr = 1;
+                        for(auto p : st) {
+                            if(p.f - curr >= e.s - e.f + 1) {
+                                w = true;
+                                break;
+                            }
+                            curr = max(curr, p.s+1);
+                        }
+                        if(c - curr + 1 >= e.s - e.f + 1) w = true;
+                        st.insert(e);
+                    }
+                }
+                if(inter.s.f != -1) {
+                    auto e = rang[inter.s.f];
+                    st.erase(st.find(rang[inter.s.f]));
+                    int curr = 1;
+                    for(auto p : st) {
+                        if(p.f - curr >= e.s - e.f + 1) {
+                            w = true;
+                            break;
+                        }
+                        curr = max(curr, p.s+1);
+                    }
+                    if(c - curr + 1 >= e.s - e.f + 1) w = true;
+                }
+
+                if(w) printf("Good\n");
+                else printf("Bad\n");
+            }
+        }
+
     }
-    return 0;
 }

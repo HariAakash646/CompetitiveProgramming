@@ -1,0 +1,1 @@
+{"name":"Local: week3","url":"d:\\CompetitiveProgramming\\DAA_NPTELCourse\\week3.cpp","tests":[{"id":1676561549435,"input":"130 340 5\n10 50\n130 130\n70 170\n0 180\n60 260","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\DAA_NPTELCourse\\week3.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: probE","url":"d:\\CompetitiveProgramming\\Contests\\UFDS_weekend_1\\probE.cpp","tests":[{"id":1689955624367,"input":"2 3 3\naaa\naaa\naa\naa\n2 1 1 g\n1 1 1 g\n1 1 2 g","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\UFDS_weekend_1\\probE.cpp","group":"local","local":true}

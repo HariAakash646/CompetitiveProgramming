@@ -1,0 +1,1 @@
+{"name":"Local: two_piles","url":"d:\\CompetitiveProgramming\\Contests\\CC99\\two_piles.cpp","tests":[{"id":1689783190740,"input":"3\n2\n1 6\n4 9\n2\n1 9\n4 6\n4\n10 10\n23 55\n21 80\n105 91","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\CC99\\two_piles.cpp","group":"local","local":true}

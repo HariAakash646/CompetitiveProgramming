@@ -35,62 +35,41 @@ typedef unsigned long long int ulli;
 
 int main()
 {
-    // freopen("feast.in", "r", stdin);
-    // freopen("feast.out", "w", stdout);
+    freopen("feast.in", "r", stdin);
+    freopen("feast.out", "w", stdout);
     int t, a, b;
     scd(t);
     scd(a);
     scd(b);
-    vi vec(t + 1, 0);
-    vi hec(t + 1, 0);
-    vb ht(t + 1, false);
-    vec[0] = 1;
-    hec[0] = 1;
-    if (b > a)
-        swap(a, b);
-    forr(i, b, t + 1)
+    vb vec2(t + 1);
+    vb vec1(t + 1);
+
+    vec2[0] = vec1[0] = true;
+    forr(i, 1, t + 1)
     {
-        if (i < a)
-        {
-            vec[i] = vec[i - b];
-            ht[i] = ht[i - b];
-        }
-        else
-        {
-            if (vec[i - a])
-            {
-                vec[i] = vec[i - a];
-                ht[i] = ht[i - a];
-            }
-            else
-            {
-                vec[i] = vec[i - b];
-                ht[i] = ht[i - b];
-            }
-            if (vec[i - a] && vec[i - a])
-            {
-                ht[i] = ht[i - a] && ht[i - b];
-            }
-        }
-        if (!vec[i / 2] && vec[i])
-        {
-            hec[i / 2] = 1;
-        }
-        if (!vec[i] && !ht[i - a] && hec[i - a])
-        {
-            vec[i] = 1;
-            ht[i] = true;
-        }
-        if (!vec[i] && !ht[i - b] && hec[i - b])
-        {
-            vec[i] = 1;
-            ht[i] = true;
-        }
+        if (i - a >= 0)
+            vec1[i] = vec1[i - a];
+        if (i - b >= 0)
+            vec1[i] = vec1[i] || vec1[i - b];
     }
+
+    forr(i, 1, t + 1)
+    {
+        vec2[i] = vec1[i];
+        if (2 * i <= t)
+            vec2[i] = vec2[i] || vec1[2 * i];
+        if (2 * i + 1 <= t)
+            vec2[i] = vec2[i] || vec1[2 * i + 1];
+        if (i - a >= 0)
+            vec2[i] = vec2[i] || vec2[i - a];
+        if (i - b >= 0)
+            vec2[i] = vec2[i] || vec2[i - b];
+    }
+
     int m = 0;
     frange(i, t + 1)
     {
-        if (vec[i])
+        if (vec2[i])
             m = i;
     }
     printf("%d", m);

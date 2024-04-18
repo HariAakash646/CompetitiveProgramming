@@ -1,0 +1,1 @@
+{"name":"Local: blood_cousings_cf","url":"d:\\CompetitiveProgramming\\trees\\blood_cousings_cf.cpp","tests":[{"id":1687588337249,"input":"6\n0 1 1 0 4 4\n7\n1 1\n1 2\n2 1\n2 2\n4 1\n5 1\n6 1\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\trees\\blood_cousings_cf.cpp","group":"local","local":true}

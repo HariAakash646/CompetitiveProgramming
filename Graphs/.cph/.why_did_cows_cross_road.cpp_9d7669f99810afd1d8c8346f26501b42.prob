@@ -1,0 +1,1 @@
+{"name":"Local: why_did_cows_cross_road","url":"d:\\CompetitiveProgramming\\Graphs\\why_did_cows_cross_road.cpp","tests":[{"id":1684605005068,"input":"4 2\n30 92 36 10\n38 85 60 16\n41 13 5 68\n20 97 13 80","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\why_did_cows_cross_road.cpp","group":"local","local":true}

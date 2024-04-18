@@ -1,0 +1,1 @@
+{"name":"Local: paths_on_the_trees","url":"d:\\CompetitiveProgramming\\trees\\paths_on_the_trees.cpp","tests":[{"id":1686895365405,"input":"2\n5 4\n1 2 1 3\n6 2 1 5 7\n5 3\n1 2 1 3\n6 6 1 4 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\trees\\paths_on_the_trees.cpp","group":"local","local":true}

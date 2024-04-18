@@ -36,10 +36,10 @@ int main()
 {
     int n;
     scd(n);
-    vi avec(n);
-    vi bvec(n);
-    frange(i, n) scd(avec[i]);
-    frange(i, n) scd(bvec[i]);
+    vector<lli> avec(n);
+    vector<lli> bvec(n);
+    frange(i, n) sclld(avec[i]);
+    frange(i, n) sclld(bvec[i]);
     lli tot = 0;
     frange(i, n)
     {

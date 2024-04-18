@@ -1,0 +1,1 @@
+{"name":"Local: probA","url":"d:\\CompetitiveProgramming\\Contests\\CF1863\\probA.cpp","tests":[{"id":1693406348982,"input":"4\n5 5 3\n--+\n5 2 3\n++-\n5 4 2\n-+\n5 0 7\n++++-++","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\CF1863\\probA.cpp","group":"local","local":true}

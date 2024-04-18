@@ -1,0 +1,1 @@
+{"name":"Local: probD","url":"d:\\CompetitiveProgramming\\Contests\\CF1863\\probD.cpp","tests":[{"id":1693411152101,"input":"3\n4 6\n..LR..\nULRU..\nDLRDUU\n..LRDD\n5 4\n.LR.\n.UU.\nUDDU\nD..D\nLR..\n2 2\n..\n..","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\CF1863\\probD.cpp","group":"local","local":true}

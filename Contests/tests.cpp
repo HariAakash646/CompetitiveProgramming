@@ -39,3 +39,31 @@ int main()
 {
     cout << check_sqr(10000000000000001);
 }
+
+else
+                {
+                    lli l = v / 2;
+                    lli r = l + 1;
+                    lli diff = l * l - vec[i];
+                    int c = 0;
+                    if (diff >= 0)
+                    {
+                        frange(e, n)
+                        {
+                            if (check_sqr(vec[e] + diff))
+                                c++;
+                        }
+                        m = max(m, c);
+                    }
+                    diff = r * r - vec[j];
+                    c = 0;
+                    if (diff >= 0)
+                    {
+                        frange(e, n)
+                        {
+                            if (check_sqr(vec[e] + diff))
+                                c++;
+                        }
+                        m = max(m, c);
+                    }
+                }

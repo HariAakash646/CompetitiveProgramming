@@ -1,0 +1,1 @@
+{"name":"Local: bakery","url":"d:\\CompetitiveProgramming\\USACOSiverFeb2023\\bakery.cpp","tests":[{"id":1677568651607,"input":"2\n\n3 7 9\n4 3 18\n2 4 19\n1 1 6\n\n5 7 3\n5 9 45\n5 2 31\n6 4 28\n4 1 8\n5 2 22","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\USACOSiverFeb2023\\bakery.cpp","group":"local","local":true}

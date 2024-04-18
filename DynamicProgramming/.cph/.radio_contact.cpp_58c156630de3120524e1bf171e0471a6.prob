@@ -1,0 +1,1 @@
+{"name":"Local: radio_contact","url":"d:\\CompetitiveProgramming\\DynamicProgramming\\radio_contact.cpp","tests":[{"id":1681145072074,"input":"2 7\n3 0\n5 0\nNN\nNWWWWWN","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\DynamicProgramming\\radio_contact.cpp","group":"local","local":true}

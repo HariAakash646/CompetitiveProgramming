@@ -1,0 +1,1 @@
+{"name":"Local: count_descendants_atc","url":"d:\\CompetitiveProgramming\\trees\\count_descendants_atc.cpp","tests":[{"id":1690550516932,"input":"7\n1 1 2 2 4 2\n4\n1 2\n7 2\n4 1\n5 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\trees\\count_descendants_atc.cpp","group":"local","local":true}

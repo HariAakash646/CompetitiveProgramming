@@ -1,0 +1,1 @@
+{"name":"Local: exclusion_inclus","url":"d:\\CompetitiveProgramming\\Contests\\CC99\\exclusion_inclus.cpp","tests":[{"id":1689777581141,"input":"3\n2\n1 24\n4\n5 8 3 2\n5\n10 21 32 43 54","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Contests\\CC99\\exclusion_inclus.cpp","group":"local","local":true}

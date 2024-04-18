@@ -1,0 +1,1 @@
+{"name":"Local: fibonacci_numbers","url":"d:\\CompetitiveProgramming\\CSES\\fibonacci_numbers.cpp","tests":[{"id":1682947858470,"input":"10","output":""},{"id":1682948197510,"input":"6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\CSES\\fibonacci_numbers.cpp","group":"local","local":true}

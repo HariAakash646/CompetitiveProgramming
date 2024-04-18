@@ -1,0 +1,1 @@
+{"name":"Local: planet_queries2_cses","url":"d:\\CompetitiveProgramming\\trees\\planet_queries2_cses.cpp","tests":[{"id":1692974509412,"input":"5 3\n2 3 2 3 2\n1 2\n1 3\n1 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\trees\\planet_queries2_cses.cpp","group":"local","local":true}

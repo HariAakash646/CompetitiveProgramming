@@ -1,0 +1,1 @@
+{"name":"Local: coin_collector_cses","url":"d:\\CompetitiveProgramming\\Graphs\\coin_collector_cses.cpp","tests":[{"id":1687676947880,"input":"4 4\n4 5 2 7\n1 2\n2 1\n1 3\n2 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CompetitiveProgramming\\Graphs\\coin_collector_cses.cpp","group":"local","local":true}
