@@ -552,3 +552,14 @@ typedef tree<
 	rb_tree_tag,
 	tree_order_statistics_node_update>
 	ordered_set;
+
+int bsze=0;
+
+struct Query {
+	int l, r, id;
+
+	bool operator<(Query y) {
+		if(l /bsze == y.l / bsze) return r < y.r;
+		else return l/bsze < y.l/bsze;
+	}
+};
