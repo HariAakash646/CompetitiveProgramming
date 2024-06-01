@@ -1,98 +1,68 @@
-    #include <bits/stdc++.h>
-     
-    using namespace std;
-    using ll = long long;
-    const int mxN = 3e5+3;
-    vector<int> a[mxN];
-    array<int, 3> e[mxN];
-    ll bit[mxN], p[mxN], ans[mxN], c = -1;
-    void upd(int idx, int x) {
-        while (idx < mxN) {
-            bit[idx] += x;
-            idx |= (idx + 1);
-        }
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define scd(t) scanf("%d", &t)
+#define sclld(t) scanf("%lld", &t)
+#define forr(i, j, k) for (int i = j; i < k; i++)
+#define frange(i, j) forr(i, 0, j)
+#define all(cont) cont.begin(), cont.end()
+#define mp make_pair
+#define pb push_back
+#define f first
+#define s second
+typedef long long int lli;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+typedef vector<bool> vb;
+typedef vector<lli> vll;
+typedef vector<string> vs;
+typedef vector<pii> vii;
+typedef vector<vi> vvi;
+typedef map<int, int> mpii;
+typedef set<int> seti;
+typedef multiset<int> mseti;
+typedef long double ld;
+
+
+void usaco()
+{
+    freopen("/media/hariaakash646/785EF1075EF0BF46/CompetitiveProgramming/input2.in", "r", stdin);
+//    freopen("problem.out", "w", stdout);
+}
+
+lli mod = 998244353;
+
+int lsb(int x) {
+    return x & (-x);
+}
+
+int main() {
+    // usaco();
+    int n, k;
+    scd(n);
+    scd(k);
+    vll vec(n+1);
+    forr(i, 1, n+1) {sclld(vec[i]); }
+
+    vll v2(n+1);
+    forr(_, 1, k+1) {
+        forr(i, 1, n+1) {
+            int id = i;
+
+            while(id <=n) {
+                // printf("%d\n", id);
+                v2[id] += vec[i];
+                v2[id] %= mod;
+                // printf("%lld %lld\n", vec[i], v2[id]);
+                id += lsb(id);
+
+            }
+            
+        } 
+        vec = v2;  
+        v2 = vll(n+1);
     }
-    ll sum(ll idx) {
-        ll s = 0;
-        while (idx >= 0) {
-            s += bit[idx];
-            idx &= (idx + 1);
-            --idx;
-        }
-        return s;
-    }
-    void supd(int l, int r, int x) {
-        upd(l, x);
-        upd(r+1, -x);
-    }
-    int n, m;
-    void solve(int l, int r, vector<int> &b) {
-        int mid = (l + r)/2;
-        while (c < mid) {
-            ++c;
-            if (e[c][0] <= e[c][1]) {
-                supd(e[c][0], e[c][1], e[c][2]);
-            }
-            else {
-                supd(e[c][0], m-1, e[c][2]);
-                supd(0, e[c][1], e[c][2]);
-            }
-        }
-        while (c > mid) {
-            if (e[c][0] <= e[c][1]) {
-                supd(e[c][0], e[c][1], -e[c][2]);
-            }
-            else {
-                supd(e[c][0], m-1, -e[c][2]);
-                supd(0, e[c][1], -e[c][2]);
-            }
-            --c;
-        }
-        vector<int> L, R;
-        for (auto x : b) {
-            ll s = 0;
-            for (auto i : a[x]) {
-                s += sum(i);
-                if (s >= p[x])  break;
-            }
-            if (s >= p[x]) {
-                ans[x] = mid;
-                L.push_back(x);
-            }
-            else {
-                R.push_back(x);
-            }
-        }
-        b.clear();
-        if (l < r) {
-            solve(l, mid-1, L);
-            solve(mid+1, r, R);
-        }
-    }
-    int main() {
-        ios::sync_with_stdio(0);
-        cin.tie(0);
-        cin >> n >> m;
-        fill(ans, ans+n, -1);
-        for (int i = 0; i < m; ++i) {
-            int x;
-            cin >> x;
-            --x;
-            a[x].push_back(i);
-        }
-        for (int i = 0; i < n; ++i) {
-            cin >> p[i];
-        }
-        int k;
-        cin >> k;
-        for (int i = 0; i < k; ++i) {
-            cin >> e[i][0] >> e[i][1] >> e[i][2];
-            --e[i][0], --e[i][1];
-        }
-        vector<int> b(n);
-        iota(b.begin(), b.end(), 0);
-        solve(0, k-1, b);
-        for (int i = 0; i < n; ++i) {
-            cout << (ans[i] == -1 ? "NIE" : to_string(ans[i] + 1)) << '\n';
-        }
-    }
+    printf("%d %d\n", n, k);
+    forr(i, 1, n+1) printf("%lld ", vec[i]);
+}

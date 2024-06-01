@@ -29,17 +29,18 @@ int rand(int a, int b) {
 int main(int argc, char* argv[]) {
 	srand(atoi(argv[1]));
 
-	int n = rand(1, 10);
-	printf("%d\n", n);
-	
-	frange(i, n) {
-		printf("%d ", rand(1, 100));
-	}
-	printf("\n");
-	frange(i, n) {
-		printf("%d ", rand(1, 100));
-	}
+	int n = rand(2, 4);
+	int m = rand(1, min(n*n, 5));
 
+	printf("%d %d\n", n, m);
+
+	set<pii> st;
+	while(st.size() < m) {
+		int x = rand(0, n-1);
+		int y = rand(0, n-1);
+		st.insert(mp(x, y));
+	}
+	for(auto p : st) printf("%d %d %d\n", p.f, p.s, rand(1, 5));
 
 
 } 

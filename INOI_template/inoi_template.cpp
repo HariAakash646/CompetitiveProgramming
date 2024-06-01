@@ -563,3 +563,39 @@ struct Query {
 		else return l/bsze < y.l/bsze;
 	}
 };
+
+vvi graph, lift;
+vi depth;
+
+void dfs(int x, int p) {
+	depth[x] = depth[p] + 1;
+	lift[0][x] = p;
+	for(auto e : graph[x]) {
+		if(e != p) dfs(e, x);
+	}
+}
+
+int binlift(int x, int c) {
+	frange(i, 20) {
+		if(c & (1<<i)) {
+			x = lift[i][x];
+		}
+	}
+	return x;
+}
+
+int lca(int u, int v) {
+	if(depth[v] < depth[u]) swap(u, v);
+	v = binlift(v, depth[v]-depth[u]);
+	if(u==v) return u;
+
+	for(int i=19; i>=0; i--) {
+		int ut = lift[i][u];
+		int vt = lift[i][v];
+		if(ut != vt) {
+			u = ut;
+			v = vt;
+		}
+	}
+	return u;
+}

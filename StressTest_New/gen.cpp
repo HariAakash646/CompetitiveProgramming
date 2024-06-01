@@ -38,22 +38,13 @@ int rand(int l, int r) {
 int main(int argc, char *argv[]) {
     srand(atoi(argv[1]));
 
-    int n= rand(1, 1000);
-    int m = rand(1, 10000);
+    int n= rand(1, 100);
+    int k = rand(1, 50);
+    
 
-    printf("%d %d\n", n, m);
-    frange(i, m) {
-        printf("%d ", rand(1, n));
-    }
-    printf("\n");
-    frange(i, n) {
-        printf("%d ", rand(1, 10000));
-    }
-    printf("\n");
-    int k = rand(1, 1000);
-    printf("%d\n", k);
-    frange(i, k) {
-        // int l = rand(1, n);
-        printf("%d %d %d\n", rand(1, m), rand(1, m), rand(1, 10000));
+    printf("%d %d\n", n, k);
+    
+    forr(i, 1, n+1) {
+        printf("%d ", rand(0, 10));
     }
 }

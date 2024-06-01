@@ -1,6 +1,6 @@
 g++ -o gen gen.cpp
-g++ -o sol sol.cpp
-g++ -o brute brute.cpp
+g++ -std=gnu++17 -O2 -Wall -pipe -static -o "sol" "stub.cpp" "sol.cpp"
+g++ -std=gnu++17 -O2 -Wall -pipe -static -o "brute" "stub.cpp" "brute.cpp"
 
 for((i=1; ;i++)) do
 	echo $i

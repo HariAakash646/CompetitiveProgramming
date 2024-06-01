@@ -31,8 +31,14 @@ void fastio()
     cout.tie(0);
 }
 
+void usaco() {
+    freopen("/media/hariaakash646/785EF1075EF0BF46/CompetitiveProgramming/input.in", "r", stdin);
+}
+
+
 int main()
 {
+    // usaco();
     fastio();
     lli m;
     int n;
@@ -45,51 +51,32 @@ int main()
         cin >> l1 >> h1 >> p1 >> l2 >> h2 >> p2;
         // p1 /= 100;
         // p2 /= 100;
-        if (l2 < l1)
+        if (p2 < p1)
         {
             swap(l1, l2);
             swap(h1, h2);
             swap(p1, p2);
         }
-        vector<pair<pii, lli>> vec;
-        if (l2 <= h1)
-        {
-            if (l1 != l2)
-                vec.pb(mp(mp(l1, l2 - 1), p1));
-            if (h2 < h1)
-            {
-                if (l2 != h2)
-                    vec.pb(mp(mp(l2, h2), max(p1, p2)));
-                vec.pb(mp(mp(h2 + 1, h1), p1));
-            }
-            else
-            {
-                vec.pb(mp(mp(l2, h1), max(p1, p2)));
-                if (h1 != h2)
-                    vec.pb(mp(mp(h1 + 1, h2), p2));
+        ld tot = m;
+        if(m >= l2) {
+            tot += ld(p2)/100 * min(h2, m);
+            lli m1 = m - min(h2, m);
+            if(m1 >= l1) {
+                tot += ld(p1)/100 * min(h1, m1);
             }
         }
-        else
-        {
-            vec.pb(mp(mp(l1, h1), p1));
-            vec.pb(mp(mp(l2, h2), p2));
+        ld tot2 = m;
+        if(m >= l1) tot2 += ld(p1)/100 * min(h1, m);
+        tot = max(tot, tot2);
+        tot2 = m;
+        lli m1 = m;
+        if(m >= l1) {
+            tot2 += l1 * ld(p1)/100;
+            m1 -= l1;
         }
-        lli v = 0;
-        int k = vec.size();
-        frange(j, pow(3, k))
-        {
-            lli x = m;
-            int l = j;
-            lli vt = 0;
-            frange(i, k)
-            {
-                if (l % 3 == 1)
-                {
-                    vt +=
-                        x -= vec[i].f.f;
-                }
-            }
-        }
-        cout << m + ld(v) / 100 << "\n";
+        if(m1 >= l2)
+            tot2 += ld(p2)/100 * min(h2, m1);
+        tot = max(tot, tot2);
+        cout << tot << "\n";
     }
 }

@@ -5,7 +5,7 @@ g++ -o brute ./brute.cpp
 for((i=1; ; ++i)); do
 	echo $i
 	./gen $i > input
-	./brute < input > out_brute
 	./sol < input > out2
-	diff -w out_brute out2 || break
+	./brute < out2 > out_brute
+	diff -w out_brute input || break
 done
